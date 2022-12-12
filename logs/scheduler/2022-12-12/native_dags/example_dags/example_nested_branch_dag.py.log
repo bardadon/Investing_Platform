@@ -1,0 +1,144 @@
+[2022-12-12 10:15:04,585] {processor.py:153} INFO - Started process (PID=71) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 10:15:04,585] {processor.py:641} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py for tasks to queue
+[2022-12-12 10:15:04,586] {logging_mixin.py:115} INFO - [2022-12-12 10:15:04,585] {dagbag.py:507} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 10:15:04,595] {processor.py:651} INFO - DAG(s) dict_keys(['example_nested_branch_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 10:15:04,791] {logging_mixin.py:115} INFO - [2022-12-12 10:15:04,791] {manager.py:508} INFO - Created Permission View: can delete on DAG:example_nested_branch_dag
+[2022-12-12 10:15:04,799] {logging_mixin.py:115} INFO - [2022-12-12 10:15:04,799] {manager.py:508} INFO - Created Permission View: can read on DAG:example_nested_branch_dag
+[2022-12-12 10:15:04,805] {logging_mixin.py:115} INFO - [2022-12-12 10:15:04,804] {manager.py:508} INFO - Created Permission View: can edit on DAG:example_nested_branch_dag
+[2022-12-12 10:15:04,805] {logging_mixin.py:115} INFO - [2022-12-12 10:15:04,805] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 10:15:04,811] {logging_mixin.py:115} INFO - [2022-12-12 10:15:04,811] {dag.py:2390} INFO - Creating ORM DAG for example_nested_branch_dag
+[2022-12-12 10:15:04,822] {logging_mixin.py:115} INFO - [2022-12-12 10:15:04,822] {dag.py:2919} INFO - Setting next_dagrun for example_nested_branch_dag to 2022-12-11T00:00:00+00:00, run_after=2022-12-12T00:00:00+00:00
+[2022-12-12 10:15:04,834] {processor.py:161} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py took 0.252 seconds
+[2022-12-12 10:15:35,462] {processor.py:153} INFO - Started process (PID=123) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 10:15:35,463] {processor.py:641} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py for tasks to queue
+[2022-12-12 10:15:35,463] {logging_mixin.py:115} INFO - [2022-12-12 10:15:35,463] {dagbag.py:507} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 10:15:35,470] {processor.py:651} INFO - DAG(s) dict_keys(['example_nested_branch_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 10:15:35,491] {logging_mixin.py:115} INFO - [2022-12-12 10:15:35,491] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 10:15:35,591] {logging_mixin.py:115} INFO - [2022-12-12 10:15:35,591] {dag.py:2919} INFO - Setting next_dagrun for example_nested_branch_dag to 2022-12-11T00:00:00+00:00, run_after=2022-12-12T00:00:00+00:00
+[2022-12-12 10:15:35,599] {processor.py:161} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py took 0.139 seconds
+[2022-12-12 10:16:06,082] {processor.py:153} INFO - Started process (PID=186) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 10:16:06,083] {processor.py:641} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py for tasks to queue
+[2022-12-12 10:16:06,083] {logging_mixin.py:115} INFO - [2022-12-12 10:16:06,083] {dagbag.py:507} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 10:16:06,092] {processor.py:651} INFO - DAG(s) dict_keys(['example_nested_branch_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 10:16:06,113] {logging_mixin.py:115} INFO - [2022-12-12 10:16:06,112] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 10:16:06,218] {logging_mixin.py:115} INFO - [2022-12-12 10:16:06,218] {dag.py:2919} INFO - Setting next_dagrun for example_nested_branch_dag to 2022-12-11T00:00:00+00:00, run_after=2022-12-12T00:00:00+00:00
+[2022-12-12 10:16:06,226] {processor.py:161} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py took 0.146 seconds
+[2022-12-12 10:16:36,414] {processor.py:153} INFO - Started process (PID=248) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 10:16:36,415] {processor.py:641} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py for tasks to queue
+[2022-12-12 10:16:36,415] {logging_mixin.py:115} INFO - [2022-12-12 10:16:36,415] {dagbag.py:507} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 10:16:36,424] {processor.py:651} INFO - DAG(s) dict_keys(['example_nested_branch_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 10:16:36,444] {logging_mixin.py:115} INFO - [2022-12-12 10:16:36,444] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 10:16:36,547] {logging_mixin.py:115} INFO - [2022-12-12 10:16:36,547] {dag.py:2919} INFO - Setting next_dagrun for example_nested_branch_dag to 2022-12-11T00:00:00+00:00, run_after=2022-12-12T00:00:00+00:00
+[2022-12-12 10:16:36,555] {processor.py:161} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py took 0.144 seconds
+[2022-12-12 10:17:06,674] {processor.py:153} INFO - Started process (PID=311) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 10:17:06,675] {processor.py:641} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py for tasks to queue
+[2022-12-12 10:17:06,675] {logging_mixin.py:115} INFO - [2022-12-12 10:17:06,675] {dagbag.py:507} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 10:17:06,684] {processor.py:651} INFO - DAG(s) dict_keys(['example_nested_branch_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 10:17:06,705] {logging_mixin.py:115} INFO - [2022-12-12 10:17:06,705] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 10:17:06,810] {logging_mixin.py:115} INFO - [2022-12-12 10:17:06,810] {dag.py:2919} INFO - Setting next_dagrun for example_nested_branch_dag to 2022-12-11T00:00:00+00:00, run_after=2022-12-12T00:00:00+00:00
+[2022-12-12 10:17:06,819] {processor.py:161} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py took 0.148 seconds
+[2022-12-12 10:17:37,012] {processor.py:153} INFO - Started process (PID=363) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 10:17:37,013] {processor.py:641} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py for tasks to queue
+[2022-12-12 10:17:37,013] {logging_mixin.py:115} INFO - [2022-12-12 10:17:37,013] {dagbag.py:507} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 10:17:37,020] {processor.py:651} INFO - DAG(s) dict_keys(['example_nested_branch_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 10:17:37,040] {logging_mixin.py:115} INFO - [2022-12-12 10:17:37,040] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 10:17:37,138] {logging_mixin.py:115} INFO - [2022-12-12 10:17:37,137] {dag.py:2919} INFO - Setting next_dagrun for example_nested_branch_dag to 2022-12-11T00:00:00+00:00, run_after=2022-12-12T00:00:00+00:00
+[2022-12-12 10:17:37,147] {processor.py:161} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py took 0.137 seconds
+[2022-12-12 10:18:08,006] {processor.py:153} INFO - Started process (PID=426) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 10:18:08,006] {processor.py:641} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py for tasks to queue
+[2022-12-12 10:18:08,007] {logging_mixin.py:115} INFO - [2022-12-12 10:18:08,007] {dagbag.py:507} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 10:18:08,015] {processor.py:651} INFO - DAG(s) dict_keys(['example_nested_branch_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 10:18:08,034] {logging_mixin.py:115} INFO - [2022-12-12 10:18:08,034] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 10:18:08,137] {logging_mixin.py:115} INFO - [2022-12-12 10:18:08,137] {dag.py:2919} INFO - Setting next_dagrun for example_nested_branch_dag to 2022-12-11T00:00:00+00:00, run_after=2022-12-12T00:00:00+00:00
+[2022-12-12 10:18:08,147] {processor.py:161} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py took 0.144 seconds
+[2022-12-12 10:18:38,882] {processor.py:153} INFO - Started process (PID=490) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 10:18:38,883] {processor.py:641} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py for tasks to queue
+[2022-12-12 10:18:38,883] {logging_mixin.py:115} INFO - [2022-12-12 10:18:38,883] {dagbag.py:507} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 10:18:38,890] {processor.py:651} INFO - DAG(s) dict_keys(['example_nested_branch_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 10:18:38,911] {logging_mixin.py:115} INFO - [2022-12-12 10:18:38,911] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 10:18:39,012] {logging_mixin.py:115} INFO - [2022-12-12 10:18:39,012] {dag.py:2919} INFO - Setting next_dagrun for example_nested_branch_dag to 2022-12-11T00:00:00+00:00, run_after=2022-12-12T00:00:00+00:00
+[2022-12-12 10:18:39,021] {processor.py:161} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py took 0.141 seconds
+[2022-12-12 10:19:09,991] {processor.py:153} INFO - Started process (PID=554) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 10:19:09,992] {processor.py:641} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py for tasks to queue
+[2022-12-12 10:19:09,992] {logging_mixin.py:115} INFO - [2022-12-12 10:19:09,992] {dagbag.py:507} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 10:19:10,001] {processor.py:651} INFO - DAG(s) dict_keys(['example_nested_branch_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 10:19:10,023] {logging_mixin.py:115} INFO - [2022-12-12 10:19:10,023] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 10:19:10,131] {logging_mixin.py:115} INFO - [2022-12-12 10:19:10,131] {dag.py:2919} INFO - Setting next_dagrun for example_nested_branch_dag to 2022-12-11T00:00:00+00:00, run_after=2022-12-12T00:00:00+00:00
+[2022-12-12 10:19:10,140] {processor.py:161} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py took 0.151 seconds
+[2022-12-12 10:19:41,077] {processor.py:153} INFO - Started process (PID=617) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 10:19:41,079] {processor.py:641} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py for tasks to queue
+[2022-12-12 10:19:41,080] {logging_mixin.py:115} INFO - [2022-12-12 10:19:41,079] {dagbag.py:507} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 10:19:41,087] {processor.py:651} INFO - DAG(s) dict_keys(['example_nested_branch_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 10:19:41,107] {logging_mixin.py:115} INFO - [2022-12-12 10:19:41,107] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 10:19:41,271] {logging_mixin.py:115} INFO - [2022-12-12 10:19:41,271] {dag.py:2919} INFO - Setting next_dagrun for example_nested_branch_dag to 2022-12-11T00:00:00+00:00, run_after=2022-12-12T00:00:00+00:00
+[2022-12-12 10:19:41,281] {processor.py:161} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py took 0.207 seconds
+[2022-12-12 10:20:11,501] {processor.py:153} INFO - Started process (PID=671) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 10:20:11,501] {processor.py:641} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py for tasks to queue
+[2022-12-12 10:20:11,502] {logging_mixin.py:115} INFO - [2022-12-12 10:20:11,502] {dagbag.py:507} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 10:20:11,509] {processor.py:651} INFO - DAG(s) dict_keys(['example_nested_branch_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 10:20:11,535] {logging_mixin.py:115} INFO - [2022-12-12 10:20:11,535] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 10:20:11,640] {logging_mixin.py:115} INFO - [2022-12-12 10:20:11,640] {dag.py:2919} INFO - Setting next_dagrun for example_nested_branch_dag to 2022-12-11T00:00:00+00:00, run_after=2022-12-12T00:00:00+00:00
+[2022-12-12 10:20:11,650] {processor.py:161} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py took 0.152 seconds
+[2022-12-12 10:20:41,687] {processor.py:153} INFO - Started process (PID=732) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 10:20:41,688] {processor.py:641} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py for tasks to queue
+[2022-12-12 10:20:41,688] {logging_mixin.py:115} INFO - [2022-12-12 10:20:41,688] {dagbag.py:507} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 10:20:41,695] {processor.py:651} INFO - DAG(s) dict_keys(['example_nested_branch_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 10:20:41,717] {logging_mixin.py:115} INFO - [2022-12-12 10:20:41,717] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 10:20:41,821] {logging_mixin.py:115} INFO - [2022-12-12 10:20:41,820] {dag.py:2919} INFO - Setting next_dagrun for example_nested_branch_dag to 2022-12-11T00:00:00+00:00, run_after=2022-12-12T00:00:00+00:00
+[2022-12-12 10:20:41,829] {processor.py:161} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py took 0.144 seconds
+[2022-12-12 10:21:11,907] {processor.py:153} INFO - Started process (PID=794) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 10:21:11,908] {processor.py:641} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py for tasks to queue
+[2022-12-12 10:21:11,909] {logging_mixin.py:115} INFO - [2022-12-12 10:21:11,909] {dagbag.py:507} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 10:21:11,917] {processor.py:651} INFO - DAG(s) dict_keys(['example_nested_branch_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 10:21:12,010] {logging_mixin.py:115} INFO - [2022-12-12 10:21:12,010] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 10:21:12,122] {logging_mixin.py:115} INFO - [2022-12-12 10:21:12,122] {dag.py:2919} INFO - Setting next_dagrun for example_nested_branch_dag to 2022-12-11T00:00:00+00:00, run_after=2022-12-12T00:00:00+00:00
+[2022-12-12 10:21:12,131] {processor.py:161} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py took 0.227 seconds
+[2022-12-12 10:21:43,132] {processor.py:153} INFO - Started process (PID=855) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 10:21:43,133] {processor.py:641} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py for tasks to queue
+[2022-12-12 10:21:43,134] {logging_mixin.py:115} INFO - [2022-12-12 10:21:43,133] {dagbag.py:507} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 10:21:43,142] {processor.py:651} INFO - DAG(s) dict_keys(['example_nested_branch_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 10:21:43,167] {logging_mixin.py:115} INFO - [2022-12-12 10:21:43,167] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 10:21:43,279] {logging_mixin.py:115} INFO - [2022-12-12 10:21:43,279] {dag.py:2919} INFO - Setting next_dagrun for example_nested_branch_dag to 2022-12-11T00:00:00+00:00, run_after=2022-12-12T00:00:00+00:00
+[2022-12-12 10:21:43,287] {processor.py:161} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py took 0.158 seconds
+[2022-12-12 11:40:54,315] {processor.py:153} INFO - Started process (PID=71) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 11:40:54,316] {processor.py:641} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py for tasks to queue
+[2022-12-12 11:40:54,317] {logging_mixin.py:115} INFO - [2022-12-12 11:40:54,316] {dagbag.py:507} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 11:40:54,326] {processor.py:651} INFO - DAG(s) dict_keys(['example_nested_branch_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 11:40:54,352] {logging_mixin.py:115} INFO - [2022-12-12 11:40:54,352] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 11:40:54,502] {logging_mixin.py:115} INFO - [2022-12-12 11:40:54,502] {dag.py:2919} INFO - Setting next_dagrun for example_nested_branch_dag to 2022-12-11T00:00:00+00:00, run_after=2022-12-12T00:00:00+00:00
+[2022-12-12 11:40:54,516] {processor.py:161} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py took 0.204 seconds
+[2022-12-12 11:41:24,716] {processor.py:153} INFO - Started process (PID=125) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 11:41:24,717] {processor.py:641} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py for tasks to queue
+[2022-12-12 11:41:24,718] {logging_mixin.py:115} INFO - [2022-12-12 11:41:24,718] {dagbag.py:507} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 11:41:24,726] {processor.py:651} INFO - DAG(s) dict_keys(['example_nested_branch_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 11:41:24,799] {logging_mixin.py:115} INFO - [2022-12-12 11:41:24,798] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 11:41:24,935] {logging_mixin.py:115} INFO - [2022-12-12 11:41:24,935] {dag.py:2919} INFO - Setting next_dagrun for example_nested_branch_dag to 2022-12-11T00:00:00+00:00, run_after=2022-12-12T00:00:00+00:00
+[2022-12-12 11:41:24,946] {processor.py:161} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py took 0.233 seconds
+[2022-12-12 11:41:55,153] {processor.py:153} INFO - Started process (PID=188) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 11:41:55,153] {processor.py:641} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py for tasks to queue
+[2022-12-12 11:41:55,154] {logging_mixin.py:115} INFO - [2022-12-12 11:41:55,154] {dagbag.py:507} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 11:41:55,161] {processor.py:651} INFO - DAG(s) dict_keys(['example_nested_branch_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 11:41:55,182] {logging_mixin.py:115} INFO - [2022-12-12 11:41:55,182] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 11:41:55,284] {logging_mixin.py:115} INFO - [2022-12-12 11:41:55,284] {dag.py:2919} INFO - Setting next_dagrun for example_nested_branch_dag to 2022-12-11T00:00:00+00:00, run_after=2022-12-12T00:00:00+00:00
+[2022-12-12 11:41:55,292] {processor.py:161} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py took 0.143 seconds
+[2022-12-12 11:43:19,145] {processor.py:153} INFO - Started process (PID=70) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 11:43:19,147] {processor.py:641} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py for tasks to queue
+[2022-12-12 11:43:19,147] {logging_mixin.py:115} INFO - [2022-12-12 11:43:19,147] {dagbag.py:507} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 11:43:19,155] {processor.py:651} INFO - DAG(s) dict_keys(['example_nested_branch_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 11:43:19,176] {logging_mixin.py:115} INFO - [2022-12-12 11:43:19,176] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 11:43:19,285] {logging_mixin.py:115} INFO - [2022-12-12 11:43:19,284] {dag.py:2919} INFO - Setting next_dagrun for example_nested_branch_dag to 2022-12-11T00:00:00+00:00, run_after=2022-12-12T00:00:00+00:00
+[2022-12-12 11:43:19,295] {processor.py:161} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py took 0.152 seconds
+[2022-12-12 11:43:49,373] {processor.py:153} INFO - Started process (PID=124) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 11:43:49,374] {processor.py:641} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py for tasks to queue
+[2022-12-12 11:43:49,374] {logging_mixin.py:115} INFO - [2022-12-12 11:43:49,374] {dagbag.py:507} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 11:43:49,382] {processor.py:651} INFO - DAG(s) dict_keys(['example_nested_branch_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 11:43:49,403] {logging_mixin.py:115} INFO - [2022-12-12 11:43:49,403] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 11:43:49,504] {logging_mixin.py:115} INFO - [2022-12-12 11:43:49,504] {dag.py:2919} INFO - Setting next_dagrun for example_nested_branch_dag to 2022-12-11T00:00:00+00:00, run_after=2022-12-12T00:00:00+00:00
+[2022-12-12 11:43:49,513] {processor.py:161} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py took 0.143 seconds
+[2022-12-12 11:44:19,816] {processor.py:153} INFO - Started process (PID=188) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 11:44:19,817] {processor.py:641} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py for tasks to queue
+[2022-12-12 11:44:19,817] {logging_mixin.py:115} INFO - [2022-12-12 11:44:19,817] {dagbag.py:507} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 11:44:19,825] {processor.py:651} INFO - DAG(s) dict_keys(['example_nested_branch_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py
+[2022-12-12 11:44:19,845] {logging_mixin.py:115} INFO - [2022-12-12 11:44:19,845] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 11:44:19,957] {logging_mixin.py:115} INFO - [2022-12-12 11:44:19,957] {dag.py:2919} INFO - Setting next_dagrun for example_nested_branch_dag to 2022-12-11T00:00:00+00:00, run_after=2022-12-12T00:00:00+00:00
+[2022-12-12 11:44:19,965] {processor.py:161} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_nested_branch_dag.py took 0.151 seconds
