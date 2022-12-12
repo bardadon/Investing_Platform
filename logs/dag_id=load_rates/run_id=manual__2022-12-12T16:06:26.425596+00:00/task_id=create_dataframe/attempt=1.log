@@ -1,0 +1,23 @@
+[2022-12-12 16:06:29,464] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: load_rates.create_dataframe manual__2022-12-12T16:06:26.425596+00:00 [queued]>
+[2022-12-12 16:06:29,469] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: load_rates.create_dataframe manual__2022-12-12T16:06:26.425596+00:00 [queued]>
+[2022-12-12 16:06:29,470] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-12 16:06:29,470] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-12-12 16:06:29,470] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-12 16:06:29,479] {taskinstance.py:1377} INFO - Executing <Task(_PythonDecoratedOperator): create_dataframe> on 2022-12-12 16:06:26.425596+00:00
+[2022-12-12 16:06:29,485] {standard_task_runner.py:52} INFO - Started process 10242 to run task
+[2022-12-12 16:06:29,487] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'load_rates', 'create_dataframe', 'manual__2022-12-12T16:06:26.425596+00:00', '--job-id', '45', '--raw', '--subdir', 'DAGS_FOLDER/extract_data.py', '--cfg-path', '/tmp/tmpan13fxli', '--error-file', '/tmp/tmp16ea_p1a']
+[2022-12-12 16:06:29,488] {standard_task_runner.py:80} INFO - Job 45: Subtask create_dataframe
+[2022-12-12 16:06:29,537] {task_command.py:369} INFO - Running <TaskInstance: load_rates.create_dataframe manual__2022-12-12T16:06:26.425596+00:00 [running]> on host 58259600a754
+[2022-12-12 16:06:29,637] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=load_rates
+AIRFLOW_CTX_TASK_ID=create_dataframe
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-12T16:06:26.425596+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-12T16:06:26.425596+00:00
+[2022-12-12 16:06:29,659] {python.py:173} INFO - Done. Returned value was: None
+[2022-12-12 16:06:29,669] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=load_rates, task_id=create_dataframe, execution_date=20221212T160626, start_date=20221212T160629, end_date=20221212T160629
+[2022-12-12 16:06:29,699] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-12-12 16:06:29,724] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -8,6 +8,8 @@ import requests
 import json
 import pandas as pd
 
+
+
 # Configs
 config = configparser.ConfigParser()
 config.read('dags/python/pipeline.conf')
@@ -28,31 +30,30 @@ default_args = {
 
 def extract_data():
 
-    # Add this dag at the end of the project.
     # Dag #1 - extract rates dictionary
- #   @task()
-  #  def extract_rates(api_key:str, start_date:str, end_date:str) -> str:
+    @task()
+    def extract_rates(api_key:str, start_date:str, end_date:str) -> str:
 
-   #     '''
-    #    Extract Forex rates from Fixer.io. 
+        '''
+        Extract Forex rates from Fixer.io. 
         
-     #   Args:
-      #      - api_key:str, start_date:str, end_date:str
-       # Returns
-        #    - result:dict
-        #'''
+        Args:
+            - api_key:str, start_date:str, end_date:str
+        Returns
+           - result:dict
+        '''
 
-  #      url = f"https://api.apilayer.com/fixer/timeseries?start_date={start_date}&end_date={end_date}"
+        url = f"https://api.apilayer.com/fixer/timeseries?start_date={start_date}&end_date={end_date}"
 
-   #     payload = {}
-    #    headers= {
-     #   "apikey": api_key
-      #  }
+        payload = {}
+        headers= {
+        "apikey": api_key
+        }
 
-       # response = requests.request("GET", url, headers=headers, data = payload)
-        #results = response.text
+        response = requests.request("GET", url, headers=headers, data = payload)
+        results = response.text
 
-        #return results
+        return results
 
     # Dag #2 - extract the rates dictionary
     @task()
@@ -93,24 +94,36 @@ def extract_data():
             first_day_df = first_day_df.append(data, ignore_index=True)
         
         first_day_df.to_csv('dags/rates.csv')
-        return first_day_df
 
     # Dag #4 - Create Google cloud storage bucket
     @task()
-    create_bucket(first_day_df):
+    def load_to_google_storage():
 
-        
+        from google.cloud import storage
+        import os
+
+        # Set google configuration
+        os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'dags/ServiceKey_GoogleCloud.json'
+
+        # Create a storage client
+        storage_client = storage.Client()
+
+        # Grab the bucket
+        bucket = storage_client.get_bucket(bucket_or_name='stock_analysis_platform')
+
+        # Create blob
+        blob = bucket.blob('rates.csv')
+
+        # Upload to bucket
+        blob.upload_from_filename('rates.csv')
 
 
 
     # Dependencies
-    #results = extract_rates(api_key = api_key, start_date='2022-01-01', end_date='2022-01-05')
-    with open('dags/python/rates.txt', 'r') as read_file:
-        results = read_file.read()
-        read_file.close()
-
+    results = extract_rates(api_key = api_key, start_date='2022-01-01', end_date='2022-01-05')
     rates = extract_rates_dictionary(results=results)
-    create_dataframe(rates, start_date='2022-01-01', end_date='2022-01-05')
+    create_dataframe(rates, start_date='2022-01-01', end_date='2022-01-05') >> load_to_google_storage()
+    
 
 # Instantiating the DAG
 extract_data = extract_data()

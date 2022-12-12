@@ -2232,3 +2232,10 @@ FileNotFoundError: [Errno 2] No such file or directory: '/projects/stock_analysi
 [2022-12-12 13:09:39,385] {logging_mixin.py:115} INFO - [2022-12-12 13:09:39,385] {dag.py:2371} INFO - Sync 1 DAGs
 [2022-12-12 13:09:39,400] {logging_mixin.py:115} INFO - [2022-12-12 13:09:39,400] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
 [2022-12-12 13:09:39,424] {processor.py:161} INFO - Processing /opt/airflow/dags/load_rates.py took 0.302 seconds
+[2022-12-12 13:10:09,637] {processor.py:153} INFO - Started process (PID=10615) to work on /opt/airflow/dags/load_rates.py
+[2022-12-12 13:10:09,637] {processor.py:641} INFO - Processing file /opt/airflow/dags/load_rates.py for tasks to queue
+[2022-12-12 13:10:09,638] {logging_mixin.py:115} INFO - [2022-12-12 13:10:09,638] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/load_rates.py
+[2022-12-12 13:10:09,904] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/load_rates.py
+[2022-12-12 13:10:09,970] {logging_mixin.py:115} INFO - [2022-12-12 13:10:09,967] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 13:10:09,994] {logging_mixin.py:115} INFO - [2022-12-12 13:10:09,994] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 13:10:10,017] {processor.py:161} INFO - Processing /opt/airflow/dags/load_rates.py took 0.385 seconds
