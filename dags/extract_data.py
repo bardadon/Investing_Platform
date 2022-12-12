@@ -93,8 +93,13 @@ def extract_data():
             first_day_df = first_day_df.append(data, ignore_index=True)
         
         first_day_df.to_csv('dags/rates.csv')
+        return first_day_df
 
+    # Dag #4 - Create Google cloud storage bucket
+    @task()
+    create_bucket(first_day_df):
 
+        
 
 
 
