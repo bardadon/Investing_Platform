@@ -1,0 +1,42 @@
+[2022-12-12 12:59:50,333] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: load_rates.create_dataframe manual__2022-12-12T12:59:48.260476+00:00 [queued]>
+[2022-12-12 12:59:50,340] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: load_rates.create_dataframe manual__2022-12-12T12:59:48.260476+00:00 [queued]>
+[2022-12-12 12:59:50,340] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-12 12:59:50,340] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-12-12 12:59:50,340] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-12 12:59:50,350] {taskinstance.py:1377} INFO - Executing <Task(_PythonDecoratedOperator): create_dataframe> on 2022-12-12 12:59:48.260476+00:00
+[2022-12-12 12:59:50,356] {standard_task_runner.py:52} INFO - Started process 3952 to run task
+[2022-12-12 12:59:50,359] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'load_rates', 'create_dataframe', 'manual__2022-12-12T12:59:48.260476+00:00', '--job-id', '19', '--raw', '--subdir', 'DAGS_FOLDER/load_rates.py', '--cfg-path', '/tmp/tmp9lzjherw', '--error-file', '/tmp/tmp2ljh6z9m']
+[2022-12-12 12:59:50,360] {standard_task_runner.py:80} INFO - Job 19: Subtask create_dataframe
+[2022-12-12 12:59:50,402] {task_command.py:369} INFO - Running <TaskInstance: load_rates.create_dataframe manual__2022-12-12T12:59:48.260476+00:00 [running]> on host 58259600a754
+[2022-12-12 12:59:50,497] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=load_rates
+AIRFLOW_CTX_TASK_ID=create_dataframe
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-12T12:59:48.260476+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-12T12:59:48.260476+00:00
+[2022-12-12 12:59:50,500] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/base.py", line 179, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/load_rates.py", line 83, in create_dataframe
+    first_day_df = pd.DataFrame(data=first_day_data)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/frame.py", line 614, in __init__
+    mgr = dict_to_mgr(data, index, columns, dtype=dtype, copy=copy, typ=manager)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/internals/construction.py", line 465, in dict_to_mgr
+    arrays, data_names, index, columns, dtype=dtype, typ=typ, consolidate=copy
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/internals/construction.py", line 119, in arrays_to_mgr
+    index = _extract_index(arrays)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/internals/construction.py", line 625, in _extract_index
+    raise ValueError("If using all scalar values, you must pass an index")
+ValueError: If using all scalar values, you must pass an index
+[2022-12-12 12:59:50,510] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=load_rates, task_id=create_dataframe, execution_date=20221212T125948, start_date=20221212T125950, end_date=20221212T125950
+[2022-12-12 12:59:50,519] {standard_task_runner.py:97} ERROR - Failed to execute job 19 for task create_dataframe (If using all scalar values, you must pass an index; 3952)
+[2022-12-12 12:59:50,531] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-12-12 12:59:50,558] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
