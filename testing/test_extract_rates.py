@@ -1,5 +1,5 @@
 import pytest
-from dags.python.Helper import extract_rates, extract_rates_dictionary, create_dataframe, load_to_google_storage
+from dags.python.Helper import *
 import configparser
 import pandas as pd
 import json
@@ -54,4 +54,25 @@ def test_extractRates_create_dataframe():
 
 
     assert df.iloc[0:1, 0].values == 4.176782 
+
+def test_extractRates_canReadDataframeAndCreateNew():
+
+    df = process_rates()
+    new_df = pd.DataFrame(columns=['rates'])
+
+    assert type(df) == pd.DataFrame
+    assert type(new_df) == pd.DataFrame
+    assert 'rates' in new_df.columns
+
+def test_extractRates_canAppendFirstCurrency():
+
+    df = process_rates()
+    new_df = pd.DataFrame(columns=['rates'])
+
+    assert new_df.iloc[0:1, 0] == 4.176782 
+
+
+
+
+    #assert len(new_df.loc[:, 'rates'].values) == len(df.columns)
 

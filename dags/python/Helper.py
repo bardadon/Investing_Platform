@@ -63,7 +63,7 @@ def create_dataframe(rates: dict, start_date: str, end_date: str, export_to_csv=
     if first_day_data is None:
         # Return an empty dataframe if there is no data for the start date
         return pd.DataFrame()
-    first_day_df = pd.DataFrame(data=first_day_data, index=[0])
+    first_day_df = pd.DataFrame()
 
     # Iterate over the dates from the start_date to the end_date
     dates = pd.date_range(start=start_date, end=end_date, freq='D')
@@ -74,6 +74,9 @@ def create_dataframe(rates: dict, start_date: str, end_date: str, export_to_csv=
             continue
             # Append the data for the date to the dataframe
         first_day_df = first_day_df.append(data, ignore_index=True)
+
+    # Add dates to the dataframe
+    first_day_df.index = dates.date
 
     if export_to_csv == True:
         first_day_df.to_csv('dags/rates.csv')
@@ -102,8 +105,33 @@ def load_to_google_storage():
     blob.upload_from_filename('dags/rates.csv')
 
 
+def process_rates():
+    
+    df = pd.read_csv('dags/rates.csv', index_col='Unnamed: 0')
+    
+    
+    return df
+
+
 if __name__ == '__main__':
-    results = extract_rates(api_key = api_key, start_date='2022-01-01', end_date='2022-01-05')
-    rates = extract_rates_dictionary(results=results)
-    create_dataframe(rates, start_date='2022-01-01', end_date='2022-01-05')
-    load_to_google_storage()
+    #results = extract_rates(api_key = api_key, start_date='2022-01-01', end_date='2022-01-02')
+    #rates = extract_rates_dictionary(results=results)
+    #create_dataframe(rates, start_date='2022-01-01', end_date='2022-01-02')
+    
+    df = process_rates()
+    new_df = pd.DataFrame(columns=['Date', 'Symbol', 'Rate'])
+    
+    print(df)
+    print(new_df.iloc[0:1, 0])
+
+    
+    currency_values = df.iloc[:, 0].values
+    currency_name = df.columns[0]
+    currency_name = df.columns[0]
+    print(currency_values, currency_name)
+    new_df[currency_name] = currency_values
+
+    print(new_df)
+
+
+    #load_to_google_storage()
