@@ -2417,3 +2417,500 @@ UnboundLocalError: local variable 'rates' referenced before assignment
 [2022-12-12 16:44:30,608] {logging_mixin.py:115} INFO - [2022-12-12 16:44:30,607] {dag.py:2371} INFO - Sync 1 DAGs
 [2022-12-12 16:44:30,625] {logging_mixin.py:115} INFO - [2022-12-12 16:44:30,625] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
 [2022-12-12 16:44:30,634] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.226 seconds
+[2022-12-12 16:45:01,002] {processor.py:153} INFO - Started process (PID=29083) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 16:45:01,003] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 16:45:01,005] {logging_mixin.py:115} INFO - [2022-12-12 16:45:01,004] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:45:01,220] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:45:01,280] {logging_mixin.py:115} INFO - [2022-12-12 16:45:01,279] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 16:45:01,296] {logging_mixin.py:115} INFO - [2022-12-12 16:45:01,296] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 16:45:01,308] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.314 seconds
+[2022-12-12 16:45:31,477] {processor.py:153} INFO - Started process (PID=29147) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 16:45:31,478] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 16:45:31,478] {logging_mixin.py:115} INFO - [2022-12-12 16:45:31,478] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:45:31,649] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:45:31,697] {logging_mixin.py:115} INFO - [2022-12-12 16:45:31,696] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 16:45:31,710] {logging_mixin.py:115} INFO - [2022-12-12 16:45:31,710] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 16:45:31,719] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.244 seconds
+[2022-12-12 16:46:01,935] {processor.py:153} INFO - Started process (PID=29203) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 16:46:01,936] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 16:46:01,936] {logging_mixin.py:115} INFO - [2022-12-12 16:46:01,936] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:46:02,102] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:46:02,149] {logging_mixin.py:115} INFO - [2022-12-12 16:46:02,148] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 16:46:02,163] {logging_mixin.py:115} INFO - [2022-12-12 16:46:02,163] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 16:46:02,172] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.240 seconds
+[2022-12-12 16:46:32,524] {processor.py:153} INFO - Started process (PID=29268) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 16:46:32,524] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 16:46:32,525] {logging_mixin.py:115} INFO - [2022-12-12 16:46:32,525] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:46:32,732] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:46:32,807] {logging_mixin.py:115} INFO - [2022-12-12 16:46:32,805] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 16:46:32,828] {logging_mixin.py:115} INFO - [2022-12-12 16:46:32,828] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 16:46:32,841] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.320 seconds
+[2022-12-12 16:47:02,935] {processor.py:153} INFO - Started process (PID=29333) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 16:47:02,935] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 16:47:02,935] {logging_mixin.py:115} INFO - [2022-12-12 16:47:02,935] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:47:03,095] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:47:03,145] {logging_mixin.py:115} INFO - [2022-12-12 16:47:03,144] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 16:47:03,163] {logging_mixin.py:115} INFO - [2022-12-12 16:47:03,163] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 16:47:03,173] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.241 seconds
+[2022-12-12 16:47:33,300] {processor.py:153} INFO - Started process (PID=29397) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 16:47:33,300] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 16:47:33,301] {logging_mixin.py:115} INFO - [2022-12-12 16:47:33,301] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:47:33,476] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:47:33,526] {logging_mixin.py:115} INFO - [2022-12-12 16:47:33,525] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 16:47:33,540] {logging_mixin.py:115} INFO - [2022-12-12 16:47:33,540] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 16:47:33,550] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.253 seconds
+[2022-12-12 16:48:03,748] {processor.py:153} INFO - Started process (PID=29452) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 16:48:03,748] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 16:48:03,749] {logging_mixin.py:115} INFO - [2022-12-12 16:48:03,748] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:48:03,924] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:48:03,968] {logging_mixin.py:115} INFO - [2022-12-12 16:48:03,968] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 16:48:03,982] {logging_mixin.py:115} INFO - [2022-12-12 16:48:03,982] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 16:48:03,991] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.246 seconds
+[2022-12-12 16:48:34,170] {processor.py:153} INFO - Started process (PID=29516) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 16:48:34,171] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 16:48:34,171] {logging_mixin.py:115} INFO - [2022-12-12 16:48:34,171] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:48:34,338] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:48:34,389] {logging_mixin.py:115} INFO - [2022-12-12 16:48:34,388] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 16:48:34,405] {logging_mixin.py:115} INFO - [2022-12-12 16:48:34,405] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 16:48:34,415] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.248 seconds
+[2022-12-12 16:49:04,693] {processor.py:153} INFO - Started process (PID=29579) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 16:49:04,694] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 16:49:04,694] {logging_mixin.py:115} INFO - [2022-12-12 16:49:04,694] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:49:04,866] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:49:04,917] {logging_mixin.py:115} INFO - [2022-12-12 16:49:04,916] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 16:49:04,930] {logging_mixin.py:115} INFO - [2022-12-12 16:49:04,930] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 16:49:04,938] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.248 seconds
+[2022-12-12 16:49:35,144] {processor.py:153} INFO - Started process (PID=29643) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 16:49:35,144] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 16:49:35,145] {logging_mixin.py:115} INFO - [2022-12-12 16:49:35,145] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:49:35,332] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:49:35,400] {logging_mixin.py:115} INFO - [2022-12-12 16:49:35,399] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 16:49:35,420] {logging_mixin.py:115} INFO - [2022-12-12 16:49:35,420] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 16:49:35,438] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.297 seconds
+[2022-12-12 16:50:05,596] {processor.py:153} INFO - Started process (PID=29697) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 16:50:05,596] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 16:50:05,597] {logging_mixin.py:115} INFO - [2022-12-12 16:50:05,597] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:50:05,761] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:50:05,808] {logging_mixin.py:115} INFO - [2022-12-12 16:50:05,807] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 16:50:05,821] {logging_mixin.py:115} INFO - [2022-12-12 16:50:05,821] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 16:50:05,831] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.238 seconds
+[2022-12-12 16:50:35,996] {processor.py:153} INFO - Started process (PID=29761) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 16:50:35,997] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 16:50:35,998] {logging_mixin.py:115} INFO - [2022-12-12 16:50:35,997] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:50:36,157] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:50:36,201] {logging_mixin.py:115} INFO - [2022-12-12 16:50:36,200] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 16:50:36,213] {logging_mixin.py:115} INFO - [2022-12-12 16:50:36,213] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 16:50:36,222] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.228 seconds
+[2022-12-12 16:51:06,409] {processor.py:153} INFO - Started process (PID=29825) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 16:51:06,410] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 16:51:06,411] {logging_mixin.py:115} INFO - [2022-12-12 16:51:06,410] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:51:06,590] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:51:06,638] {logging_mixin.py:115} INFO - [2022-12-12 16:51:06,637] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 16:51:06,652] {logging_mixin.py:115} INFO - [2022-12-12 16:51:06,652] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 16:51:06,663] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.257 seconds
+[2022-12-12 16:51:36,770] {processor.py:153} INFO - Started process (PID=29891) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 16:51:36,770] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 16:51:36,771] {logging_mixin.py:115} INFO - [2022-12-12 16:51:36,771] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:51:36,931] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:51:36,976] {logging_mixin.py:115} INFO - [2022-12-12 16:51:36,976] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 16:51:36,989] {logging_mixin.py:115} INFO - [2022-12-12 16:51:36,989] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 16:51:36,997] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.231 seconds
+[2022-12-12 16:52:07,222] {processor.py:153} INFO - Started process (PID=29946) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 16:52:07,223] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 16:52:07,223] {logging_mixin.py:115} INFO - [2022-12-12 16:52:07,223] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:52:07,399] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:52:07,446] {logging_mixin.py:115} INFO - [2022-12-12 16:52:07,445] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 16:52:07,458] {logging_mixin.py:115} INFO - [2022-12-12 16:52:07,458] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 16:52:07,467] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.247 seconds
+[2022-12-12 16:52:37,677] {processor.py:153} INFO - Started process (PID=30011) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 16:52:37,678] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 16:52:37,679] {logging_mixin.py:115} INFO - [2022-12-12 16:52:37,678] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:52:37,864] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:52:37,945] {logging_mixin.py:115} INFO - [2022-12-12 16:52:37,944] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 16:52:37,958] {logging_mixin.py:115} INFO - [2022-12-12 16:52:37,958] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 16:52:37,968] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.294 seconds
+[2022-12-12 16:53:08,220] {processor.py:153} INFO - Started process (PID=30075) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 16:53:08,221] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 16:53:08,221] {logging_mixin.py:115} INFO - [2022-12-12 16:53:08,221] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:53:08,389] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:53:08,441] {logging_mixin.py:115} INFO - [2022-12-12 16:53:08,440] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 16:53:08,455] {logging_mixin.py:115} INFO - [2022-12-12 16:53:08,455] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 16:53:08,465] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.248 seconds
+[2022-12-12 16:53:38,788] {processor.py:153} INFO - Started process (PID=30140) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 16:53:38,789] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 16:53:38,790] {logging_mixin.py:115} INFO - [2022-12-12 16:53:38,790] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:53:38,967] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:53:39,017] {logging_mixin.py:115} INFO - [2022-12-12 16:53:39,017] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 16:53:39,030] {logging_mixin.py:115} INFO - [2022-12-12 16:53:39,030] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 16:53:39,039] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.254 seconds
+[2022-12-12 16:54:09,235] {processor.py:153} INFO - Started process (PID=30194) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 16:54:09,236] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 16:54:09,236] {logging_mixin.py:115} INFO - [2022-12-12 16:54:09,236] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:54:09,398] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:54:09,444] {logging_mixin.py:115} INFO - [2022-12-12 16:54:09,444] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 16:54:09,457] {logging_mixin.py:115} INFO - [2022-12-12 16:54:09,457] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 16:54:09,466] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.233 seconds
+[2022-12-12 16:54:40,063] {processor.py:153} INFO - Started process (PID=30257) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 16:54:40,064] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 16:54:40,064] {logging_mixin.py:115} INFO - [2022-12-12 16:54:40,064] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:54:40,237] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:54:40,280] {logging_mixin.py:115} INFO - [2022-12-12 16:54:40,279] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 16:54:40,292] {logging_mixin.py:115} INFO - [2022-12-12 16:54:40,292] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 16:54:40,300] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.240 seconds
+[2022-12-12 16:55:10,939] {processor.py:153} INFO - Started process (PID=30322) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 16:55:10,939] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 16:55:10,940] {logging_mixin.py:115} INFO - [2022-12-12 16:55:10,940] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:55:11,099] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:55:11,143] {logging_mixin.py:115} INFO - [2022-12-12 16:55:11,143] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 16:55:11,155] {logging_mixin.py:115} INFO - [2022-12-12 16:55:11,155] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 16:55:11,164] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.228 seconds
+[2022-12-12 16:55:41,948] {processor.py:153} INFO - Started process (PID=30385) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 16:55:41,949] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 16:55:41,949] {logging_mixin.py:115} INFO - [2022-12-12 16:55:41,949] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:55:42,113] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:55:42,163] {logging_mixin.py:115} INFO - [2022-12-12 16:55:42,163] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 16:55:42,177] {logging_mixin.py:115} INFO - [2022-12-12 16:55:42,177] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 16:55:42,227] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.282 seconds
+[2022-12-12 16:56:12,637] {processor.py:153} INFO - Started process (PID=30450) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 16:56:12,638] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 16:56:12,638] {logging_mixin.py:115} INFO - [2022-12-12 16:56:12,638] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:56:12,800] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:56:12,845] {logging_mixin.py:115} INFO - [2022-12-12 16:56:12,845] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 16:56:12,858] {logging_mixin.py:115} INFO - [2022-12-12 16:56:12,857] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 16:56:12,913] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.278 seconds
+[2022-12-12 16:56:43,288] {processor.py:153} INFO - Started process (PID=30504) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 16:56:43,289] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 16:56:43,289] {logging_mixin.py:115} INFO - [2022-12-12 16:56:43,289] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:56:43,481] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:56:43,528] {logging_mixin.py:115} INFO - [2022-12-12 16:56:43,527] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 16:56:43,541] {logging_mixin.py:115} INFO - [2022-12-12 16:56:43,541] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 16:56:43,556] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.271 seconds
+[2022-12-12 16:57:14,054] {processor.py:153} INFO - Started process (PID=30568) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 16:57:14,055] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 16:57:14,063] {logging_mixin.py:115} INFO - [2022-12-12 16:57:14,062] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:57:14,255] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:57:14,301] {logging_mixin.py:115} INFO - [2022-12-12 16:57:14,301] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 16:57:14,316] {logging_mixin.py:115} INFO - [2022-12-12 16:57:14,316] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 16:57:14,325] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.275 seconds
+[2022-12-12 16:57:45,039] {processor.py:153} INFO - Started process (PID=30632) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 16:57:45,040] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 16:57:45,041] {logging_mixin.py:115} INFO - [2022-12-12 16:57:45,040] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:57:45,209] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:57:45,265] {logging_mixin.py:115} INFO - [2022-12-12 16:57:45,264] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 16:57:45,278] {logging_mixin.py:115} INFO - [2022-12-12 16:57:45,278] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 16:57:45,368] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.331 seconds
+[2022-12-12 16:58:15,411] {processor.py:153} INFO - Started process (PID=30698) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 16:58:15,412] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 16:58:15,413] {logging_mixin.py:115} INFO - [2022-12-12 16:58:15,412] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:58:15,620] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:58:15,670] {logging_mixin.py:115} INFO - [2022-12-12 16:58:15,670] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 16:58:15,684] {logging_mixin.py:115} INFO - [2022-12-12 16:58:15,684] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 16:58:15,694] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.286 seconds
+[2022-12-12 16:58:46,528] {processor.py:153} INFO - Started process (PID=30754) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 16:58:46,530] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 16:58:46,531] {logging_mixin.py:115} INFO - [2022-12-12 16:58:46,531] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:58:46,953] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:58:47,067] {logging_mixin.py:115} INFO - [2022-12-12 16:58:47,066] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 16:58:47,090] {logging_mixin.py:115} INFO - [2022-12-12 16:58:47,090] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 16:58:47,106] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.596 seconds
+[2022-12-12 16:59:17,637] {processor.py:153} INFO - Started process (PID=30817) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 16:59:17,637] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 16:59:17,637] {logging_mixin.py:115} INFO - [2022-12-12 16:59:17,637] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:59:17,793] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:59:17,837] {logging_mixin.py:115} INFO - [2022-12-12 16:59:17,836] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 16:59:17,849] {logging_mixin.py:115} INFO - [2022-12-12 16:59:17,849] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 16:59:17,858] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.224 seconds
+[2022-12-12 16:59:48,181] {processor.py:153} INFO - Started process (PID=30882) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 16:59:48,181] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 16:59:48,182] {logging_mixin.py:115} INFO - [2022-12-12 16:59:48,182] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:59:48,350] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 16:59:48,400] {logging_mixin.py:115} INFO - [2022-12-12 16:59:48,399] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 16:59:48,413] {logging_mixin.py:115} INFO - [2022-12-12 16:59:48,413] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 16:59:48,422] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.244 seconds
+[2022-12-12 17:00:18,743] {processor.py:153} INFO - Started process (PID=30947) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 17:00:18,743] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 17:00:18,744] {logging_mixin.py:115} INFO - [2022-12-12 17:00:18,744] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:00:18,986] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:00:19,037] {logging_mixin.py:115} INFO - [2022-12-12 17:00:19,036] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 17:00:19,055] {logging_mixin.py:115} INFO - [2022-12-12 17:00:19,055] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 17:00:19,065] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.326 seconds
+[2022-12-12 17:00:49,212] {processor.py:153} INFO - Started process (PID=31002) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 17:00:49,213] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 17:00:49,214] {logging_mixin.py:115} INFO - [2022-12-12 17:00:49,214] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:00:49,381] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:00:49,425] {logging_mixin.py:115} INFO - [2022-12-12 17:00:49,424] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 17:00:49,438] {logging_mixin.py:115} INFO - [2022-12-12 17:00:49,437] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 17:00:49,446] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.237 seconds
+[2022-12-12 17:01:19,846] {processor.py:153} INFO - Started process (PID=31066) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 17:01:19,846] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 17:01:19,847] {logging_mixin.py:115} INFO - [2022-12-12 17:01:19,847] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:01:20,100] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:01:20,152] {logging_mixin.py:115} INFO - [2022-12-12 17:01:20,151] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 17:01:20,168] {logging_mixin.py:115} INFO - [2022-12-12 17:01:20,168] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 17:01:20,181] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.338 seconds
+[2022-12-12 17:01:50,527] {processor.py:153} INFO - Started process (PID=31129) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 17:01:50,528] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 17:01:50,528] {logging_mixin.py:115} INFO - [2022-12-12 17:01:50,528] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:01:50,729] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:01:50,783] {logging_mixin.py:115} INFO - [2022-12-12 17:01:50,782] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 17:01:50,797] {logging_mixin.py:115} INFO - [2022-12-12 17:01:50,797] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 17:01:50,809] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.284 seconds
+[2022-12-12 17:02:20,907] {processor.py:153} INFO - Started process (PID=31193) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 17:02:20,908] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 17:02:20,909] {logging_mixin.py:115} INFO - [2022-12-12 17:02:20,909] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:02:21,087] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:02:21,135] {logging_mixin.py:115} INFO - [2022-12-12 17:02:21,134] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 17:02:21,152] {logging_mixin.py:115} INFO - [2022-12-12 17:02:21,152] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 17:02:21,164] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.260 seconds
+[2022-12-12 17:02:51,379] {processor.py:153} INFO - Started process (PID=31249) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 17:02:51,380] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 17:02:51,380] {logging_mixin.py:115} INFO - [2022-12-12 17:02:51,380] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:02:51,563] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:02:51,613] {logging_mixin.py:115} INFO - [2022-12-12 17:02:51,613] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 17:02:51,628] {logging_mixin.py:115} INFO - [2022-12-12 17:02:51,628] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 17:02:51,638] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.262 seconds
+[2022-12-12 17:03:21,768] {processor.py:153} INFO - Started process (PID=31315) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 17:03:21,769] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 17:03:21,769] {logging_mixin.py:115} INFO - [2022-12-12 17:03:21,769] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:03:21,937] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:03:21,982] {logging_mixin.py:115} INFO - [2022-12-12 17:03:21,981] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 17:03:21,994] {logging_mixin.py:115} INFO - [2022-12-12 17:03:21,994] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 17:03:22,003] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.239 seconds
+[2022-12-12 17:03:52,114] {processor.py:153} INFO - Started process (PID=31379) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 17:03:52,115] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 17:03:52,115] {logging_mixin.py:115} INFO - [2022-12-12 17:03:52,115] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:03:52,290] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:03:52,337] {logging_mixin.py:115} INFO - [2022-12-12 17:03:52,337] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 17:03:52,350] {logging_mixin.py:115} INFO - [2022-12-12 17:03:52,350] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 17:03:52,359] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.248 seconds
+[2022-12-12 17:04:22,550] {processor.py:153} INFO - Started process (PID=31433) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 17:04:22,551] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 17:04:22,551] {logging_mixin.py:115} INFO - [2022-12-12 17:04:22,551] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:04:22,715] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:04:22,768] {logging_mixin.py:115} INFO - [2022-12-12 17:04:22,767] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 17:04:22,781] {logging_mixin.py:115} INFO - [2022-12-12 17:04:22,781] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 17:04:22,790] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.244 seconds
+[2022-12-12 17:04:52,934] {processor.py:153} INFO - Started process (PID=31498) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 17:04:52,935] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 17:04:52,935] {logging_mixin.py:115} INFO - [2022-12-12 17:04:52,935] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:04:53,106] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:04:53,159] {logging_mixin.py:115} INFO - [2022-12-12 17:04:53,158] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 17:04:53,173] {logging_mixin.py:115} INFO - [2022-12-12 17:04:53,173] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 17:04:53,183] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.252 seconds
+[2022-12-12 17:05:23,316] {processor.py:153} INFO - Started process (PID=31561) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 17:05:23,317] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 17:05:23,318] {logging_mixin.py:115} INFO - [2022-12-12 17:05:23,318] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:05:23,482] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:05:23,527] {logging_mixin.py:115} INFO - [2022-12-12 17:05:23,526] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 17:05:23,540] {logging_mixin.py:115} INFO - [2022-12-12 17:05:23,539] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 17:05:23,548] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.234 seconds
+[2022-12-12 17:05:53,787] {processor.py:153} INFO - Started process (PID=31625) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 17:05:53,787] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 17:05:53,788] {logging_mixin.py:115} INFO - [2022-12-12 17:05:53,788] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:05:53,962] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:05:54,016] {logging_mixin.py:115} INFO - [2022-12-12 17:05:54,015] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 17:05:54,031] {logging_mixin.py:115} INFO - [2022-12-12 17:05:54,031] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 17:05:54,042] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.257 seconds
+[2022-12-12 17:06:24,191] {processor.py:153} INFO - Started process (PID=31681) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 17:06:24,192] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 17:06:24,193] {logging_mixin.py:115} INFO - [2022-12-12 17:06:24,193] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:06:24,354] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:06:24,405] {logging_mixin.py:115} INFO - [2022-12-12 17:06:24,404] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 17:06:24,418] {logging_mixin.py:115} INFO - [2022-12-12 17:06:24,418] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 17:06:24,427] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.238 seconds
+[2022-12-12 17:06:54,621] {processor.py:153} INFO - Started process (PID=31746) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 17:06:54,622] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 17:06:54,622] {logging_mixin.py:115} INFO - [2022-12-12 17:06:54,622] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:06:54,782] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:06:54,827] {logging_mixin.py:115} INFO - [2022-12-12 17:06:54,826] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 17:06:54,840] {logging_mixin.py:115} INFO - [2022-12-12 17:06:54,840] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 17:06:54,849] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.231 seconds
+[2022-12-12 17:07:25,024] {processor.py:153} INFO - Started process (PID=31810) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 17:07:25,025] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 17:07:25,025] {logging_mixin.py:115} INFO - [2022-12-12 17:07:25,025] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:07:25,205] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:07:25,253] {logging_mixin.py:115} INFO - [2022-12-12 17:07:25,252] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 17:07:25,268] {logging_mixin.py:115} INFO - [2022-12-12 17:07:25,268] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 17:07:25,278] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.257 seconds
+[2022-12-12 17:07:55,484] {processor.py:153} INFO - Started process (PID=31874) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 17:07:55,485] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 17:07:55,485] {logging_mixin.py:115} INFO - [2022-12-12 17:07:55,485] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:07:55,655] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:07:55,704] {logging_mixin.py:115} INFO - [2022-12-12 17:07:55,704] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 17:07:55,718] {logging_mixin.py:115} INFO - [2022-12-12 17:07:55,718] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 17:07:55,727] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.246 seconds
+[2022-12-12 17:08:25,829] {processor.py:153} INFO - Started process (PID=31929) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 17:08:25,829] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 17:08:25,830] {logging_mixin.py:115} INFO - [2022-12-12 17:08:25,829] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:08:26,002] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:08:26,056] {logging_mixin.py:115} INFO - [2022-12-12 17:08:26,056] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 17:08:26,069] {logging_mixin.py:115} INFO - [2022-12-12 17:08:26,069] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 17:08:26,078] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.253 seconds
+[2022-12-12 17:08:56,163] {processor.py:153} INFO - Started process (PID=31994) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 17:08:56,164] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 17:08:56,164] {logging_mixin.py:115} INFO - [2022-12-12 17:08:56,164] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:08:56,328] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:08:56,372] {logging_mixin.py:115} INFO - [2022-12-12 17:08:56,372] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 17:08:56,385] {logging_mixin.py:115} INFO - [2022-12-12 17:08:56,385] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 17:08:56,396] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.236 seconds
+[2022-12-12 17:09:26,574] {processor.py:153} INFO - Started process (PID=32060) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 17:09:26,575] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 17:09:26,575] {logging_mixin.py:115} INFO - [2022-12-12 17:09:26,575] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:09:26,744] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:09:26,791] {logging_mixin.py:115} INFO - [2022-12-12 17:09:26,791] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 17:09:26,804] {logging_mixin.py:115} INFO - [2022-12-12 17:09:26,804] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 17:09:26,812] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.241 seconds
+[2022-12-12 17:09:56,856] {processor.py:153} INFO - Started process (PID=32124) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 17:09:56,857] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 17:09:56,858] {logging_mixin.py:115} INFO - [2022-12-12 17:09:56,858] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:09:57,030] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:09:57,077] {logging_mixin.py:115} INFO - [2022-12-12 17:09:57,077] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 17:09:57,090] {logging_mixin.py:115} INFO - [2022-12-12 17:09:57,089] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 17:09:57,100] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.247 seconds
+[2022-12-12 17:10:27,293] {processor.py:153} INFO - Started process (PID=32179) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 17:10:27,293] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 17:10:27,294] {logging_mixin.py:115} INFO - [2022-12-12 17:10:27,294] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:10:27,461] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:10:27,509] {logging_mixin.py:115} INFO - [2022-12-12 17:10:27,508] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 17:10:27,521] {logging_mixin.py:115} INFO - [2022-12-12 17:10:27,521] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 17:10:27,530] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.241 seconds
+[2022-12-12 17:10:57,855] {processor.py:153} INFO - Started process (PID=32243) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 17:10:57,856] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 17:10:57,856] {logging_mixin.py:115} INFO - [2022-12-12 17:10:57,856] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:10:58,052] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:10:58,097] {logging_mixin.py:115} INFO - [2022-12-12 17:10:58,096] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 17:10:58,109] {logging_mixin.py:115} INFO - [2022-12-12 17:10:58,109] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 17:10:58,119] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.267 seconds
+[2022-12-12 17:11:28,142] {processor.py:153} INFO - Started process (PID=32308) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 17:11:28,142] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 17:11:28,143] {logging_mixin.py:115} INFO - [2022-12-12 17:11:28,143] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:11:28,314] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:11:28,358] {logging_mixin.py:115} INFO - [2022-12-12 17:11:28,357] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 17:11:28,371] {logging_mixin.py:115} INFO - [2022-12-12 17:11:28,371] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 17:11:28,381] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.242 seconds
+[2022-12-12 17:11:58,556] {processor.py:153} INFO - Started process (PID=32371) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 17:11:58,557] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 17:11:58,557] {logging_mixin.py:115} INFO - [2022-12-12 17:11:58,557] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:11:58,771] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:11:58,818] {logging_mixin.py:115} INFO - [2022-12-12 17:11:58,817] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 17:11:58,832] {logging_mixin.py:115} INFO - [2022-12-12 17:11:58,832] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 17:11:58,842] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.291 seconds
+[2022-12-12 17:12:29,115] {processor.py:153} INFO - Started process (PID=32426) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 17:12:29,116] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 17:12:29,116] {logging_mixin.py:115} INFO - [2022-12-12 17:12:29,116] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:12:29,278] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:12:29,327] {logging_mixin.py:115} INFO - [2022-12-12 17:12:29,326] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 17:12:29,339] {logging_mixin.py:115} INFO - [2022-12-12 17:12:29,339] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 17:12:29,349] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.236 seconds
+[2022-12-12 17:12:59,540] {processor.py:153} INFO - Started process (PID=32490) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 17:12:59,541] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 17:12:59,542] {logging_mixin.py:115} INFO - [2022-12-12 17:12:59,542] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:12:59,750] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:12:59,806] {logging_mixin.py:115} INFO - [2022-12-12 17:12:59,805] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 17:12:59,824] {logging_mixin.py:115} INFO - [2022-12-12 17:12:59,824] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 17:12:59,834] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.297 seconds
+[2022-12-12 17:13:29,894] {processor.py:153} INFO - Started process (PID=32554) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 17:13:29,894] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 17:13:29,895] {logging_mixin.py:115} INFO - [2022-12-12 17:13:29,895] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:13:30,060] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:13:30,105] {logging_mixin.py:115} INFO - [2022-12-12 17:13:30,104] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 17:13:30,117] {logging_mixin.py:115} INFO - [2022-12-12 17:13:30,117] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 17:13:30,126] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.234 seconds
+[2022-12-12 17:14:00,363] {processor.py:153} INFO - Started process (PID=32620) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 17:14:00,364] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 17:14:00,365] {logging_mixin.py:115} INFO - [2022-12-12 17:14:00,365] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:14:00,569] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:14:00,624] {logging_mixin.py:115} INFO - [2022-12-12 17:14:00,623] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 17:14:00,639] {logging_mixin.py:115} INFO - [2022-12-12 17:14:00,638] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 17:14:00,649] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.288 seconds
+[2022-12-12 17:14:30,672] {processor.py:153} INFO - Started process (PID=32675) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 17:14:30,673] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 17:14:30,674] {logging_mixin.py:115} INFO - [2022-12-12 17:14:30,673] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:14:30,859] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:14:30,904] {logging_mixin.py:115} INFO - [2022-12-12 17:14:30,904] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 17:14:30,917] {logging_mixin.py:115} INFO - [2022-12-12 17:14:30,917] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 17:14:30,926] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.256 seconds
+[2022-12-12 17:15:01,000] {processor.py:153} INFO - Started process (PID=32738) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 17:15:01,001] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 17:15:01,002] {logging_mixin.py:115} INFO - [2022-12-12 17:15:01,002] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:15:01,176] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:15:01,226] {logging_mixin.py:115} INFO - [2022-12-12 17:15:01,225] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 17:15:01,239] {logging_mixin.py:115} INFO - [2022-12-12 17:15:01,239] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 17:15:01,248] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.252 seconds
+[2022-12-12 17:15:31,378] {processor.py:153} INFO - Started process (PID=335) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 17:15:31,378] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 17:15:31,379] {logging_mixin.py:115} INFO - [2022-12-12 17:15:31,379] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:15:31,538] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:15:31,587] {logging_mixin.py:115} INFO - [2022-12-12 17:15:31,586] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 17:15:31,600] {logging_mixin.py:115} INFO - [2022-12-12 17:15:31,600] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 17:15:31,609] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.234 seconds
+[2022-12-12 17:16:01,786] {processor.py:153} INFO - Started process (PID=391) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 17:16:01,787] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 17:16:01,787] {logging_mixin.py:115} INFO - [2022-12-12 17:16:01,787] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:16:01,956] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:16:02,040] {logging_mixin.py:115} INFO - [2022-12-12 17:16:02,040] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 17:16:02,054] {logging_mixin.py:115} INFO - [2022-12-12 17:16:02,053] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 17:16:02,062] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.279 seconds
+[2022-12-12 17:16:32,309] {processor.py:153} INFO - Started process (PID=456) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 17:16:32,310] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 17:16:32,310] {logging_mixin.py:115} INFO - [2022-12-12 17:16:32,310] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:16:32,474] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:16:32,518] {logging_mixin.py:115} INFO - [2022-12-12 17:16:32,517] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 17:16:32,530] {logging_mixin.py:115} INFO - [2022-12-12 17:16:32,530] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 17:16:32,539] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.233 seconds
+[2022-12-12 17:17:02,772] {processor.py:153} INFO - Started process (PID=520) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 17:17:02,773] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 17:17:02,774] {logging_mixin.py:115} INFO - [2022-12-12 17:17:02,774] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:17:02,949] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:17:02,996] {logging_mixin.py:115} INFO - [2022-12-12 17:17:02,996] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 17:17:03,009] {logging_mixin.py:115} INFO - [2022-12-12 17:17:03,009] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 17:17:03,017] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.247 seconds
+[2022-12-12 17:17:33,259] {processor.py:153} INFO - Started process (PID=583) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 17:17:33,260] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 17:17:33,261] {logging_mixin.py:115} INFO - [2022-12-12 17:17:33,261] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:17:33,441] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:17:33,487] {logging_mixin.py:115} INFO - [2022-12-12 17:17:33,487] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 17:17:33,500] {logging_mixin.py:115} INFO - [2022-12-12 17:17:33,500] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 17:17:33,508] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.251 seconds
+[2022-12-12 17:18:03,714] {processor.py:153} INFO - Started process (PID=638) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 17:18:03,715] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 17:18:03,715] {logging_mixin.py:115} INFO - [2022-12-12 17:18:03,715] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:18:03,898] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:18:03,949] {logging_mixin.py:115} INFO - [2022-12-12 17:18:03,948] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 17:18:03,963] {logging_mixin.py:115} INFO - [2022-12-12 17:18:03,962] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 17:18:03,973] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.262 seconds
+[2022-12-12 17:18:34,228] {processor.py:153} INFO - Started process (PID=703) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 17:18:34,229] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 17:18:34,229] {logging_mixin.py:115} INFO - [2022-12-12 17:18:34,229] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:18:34,401] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:18:34,448] {logging_mixin.py:115} INFO - [2022-12-12 17:18:34,448] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 17:18:34,461] {logging_mixin.py:115} INFO - [2022-12-12 17:18:34,461] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 17:18:34,470] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.244 seconds
+[2022-12-12 17:19:04,703] {processor.py:153} INFO - Started process (PID=767) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 17:19:04,704] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 17:19:04,704] {logging_mixin.py:115} INFO - [2022-12-12 17:19:04,704] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:19:04,867] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:19:04,912] {logging_mixin.py:115} INFO - [2022-12-12 17:19:04,912] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 17:19:04,926] {logging_mixin.py:115} INFO - [2022-12-12 17:19:04,926] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 17:19:04,935] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.235 seconds
+[2022-12-12 17:19:34,976] {processor.py:153} INFO - Started process (PID=832) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 17:19:34,977] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 17:19:34,977] {logging_mixin.py:115} INFO - [2022-12-12 17:19:34,977] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:19:35,151] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:19:35,201] {logging_mixin.py:115} INFO - [2022-12-12 17:19:35,200] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 17:19:35,214] {logging_mixin.py:115} INFO - [2022-12-12 17:19:35,214] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 17:19:35,222] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.249 seconds
+[2022-12-12 17:20:05,445] {processor.py:153} INFO - Started process (PID=887) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 17:20:05,500] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 17:20:05,502] {logging_mixin.py:115} INFO - [2022-12-12 17:20:05,501] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:20:05,666] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:20:05,708] {logging_mixin.py:115} INFO - [2022-12-12 17:20:05,707] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 17:20:05,720] {logging_mixin.py:115} INFO - [2022-12-12 17:20:05,720] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 17:20:05,729] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.286 seconds
+[2022-12-12 17:20:35,864] {processor.py:153} INFO - Started process (PID=951) to work on /opt/airflow/dags/extract_data.py
+[2022-12-12 17:20:35,865] {processor.py:641} INFO - Processing file /opt/airflow/dags/extract_data.py for tasks to queue
+[2022-12-12 17:20:35,865] {logging_mixin.py:115} INFO - [2022-12-12 17:20:35,865] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:20:36,060] {processor.py:651} INFO - DAG(s) dict_keys(['load_rates']) retrieved from /opt/airflow/dags/extract_data.py
+[2022-12-12 17:20:36,114] {logging_mixin.py:115} INFO - [2022-12-12 17:20:36,113] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-12 17:20:36,133] {logging_mixin.py:115} INFO - [2022-12-12 17:20:36,133] {dag.py:2919} INFO - Setting next_dagrun for load_rates to 2022-12-12T12:13:10.766184+00:00, run_after=2022-12-13T12:13:10.766184+00:00
+[2022-12-12 17:20:36,143] {processor.py:161} INFO - Processing /opt/airflow/dags/extract_data.py took 0.283 seconds
