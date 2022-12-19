@@ -50,7 +50,7 @@ def test_extractRates_create_dataframe():
     end_date = "2022-01-02"
 
     # Call the function
-    df = create_dataframe(rates, start_date, end_date)
+    df = create_dataframe(rates, start_date, end_date, export_to_csv=False)
 
 
     assert df.iloc[0:1, 0].values == 4.176782 
@@ -66,13 +66,24 @@ def test_extractRates_canReadDataframeAndCreateNew():
 
 def test_extractRates_canAppendFirstCurrency():
 
-    df = process_rates()
-    new_df = pd.DataFrame(columns=['rates'])
+    # Process the rates and extract a new DataFrame
+    new_df = process_rates()
+    
+    # Assert that the new DataFrame has the right columns, and first row is correct
+    assert new_df.columns.to_list() == ['date', 'symbol', 'rate']
+    assert new_df.iloc[0:1, 0].values == pd.to_datetime('2022-01-01')
+    assert new_df.iloc[0:1, 1].values == 'AED'
+    assert new_df.iloc[0:1, 2].values == 4.176782
 
-    assert new_df.iloc[0:1, 0] == 4.176782 
+def test_extractRates_canAppendFirstCurrency():
 
+    # Process the rates and extract a new DataFrame
+    new_df = process_rates()
 
-
-
-    #assert len(new_df.loc[:, 'rates'].values) == len(df.columns)
-
+    old_df = pd.read_csv('dags/rates.csv', index_col='Unnamed: 0')
+    
+    # Assert that the new DataFrame has the right columns, and first row is correct
+    assert new_df.columns.to_list() == ['date', 'symbol', 'rate']
+    assert new_df.iloc[0:1, 0].values == pd.to_datetime('2022-01-01')
+    assert new_df.iloc[0:1, 1].values == 'AED'
+    assert new_df.iloc[0:1, 2].values == 4.176782

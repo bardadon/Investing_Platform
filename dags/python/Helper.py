@@ -7,7 +7,7 @@ from datetime import datetime
 import requests
 import json
 import pandas as pd
-
+import numpy as np
 
 
 # Configs
@@ -83,7 +83,62 @@ def create_dataframe(rates: dict, start_date: str, end_date: str, export_to_csv=
         
     return first_day_df
 
-# Dag #4 - Create Google cloud storage bucket
+
+def process_rates(rates_location = 'dags/rates.csv') -> pd.DataFrame:
+
+    '''
+    Process the rates DataFrame. 
+    Convert format from this:
+        
+        - date|AED|AFN|ALL|AMD|ANG ... etc
+
+    To this:
+
+        - date|symbol|rate
+
+    Args:
+        - rates_DataFrame_location(str) - Location of the rates CSV file.
+    Returns:
+        - new_df(pd.DataFrame) - The new DataFrame.
+    '''
+    
+    df = pd.read_csv(rates_location, index_col='Unnamed: 0')
+
+    # Create a new DataFrame
+    new_df = pd.DataFrame(columns=['date', 'symbol', 'rate'])
+
+    # Set values
+    symbols = df.T.index
+    start_date = np.min(df.index)
+    end_date = np.max(df.index)
+    dates = pd.date_range(start_date, end_date, freq='D')
+    arr = np.array([])
+
+    # Create a series of dates.
+    # Each date is repeated as many times as there are symbols
+    repeated_dates = np.tile(dates, len(symbols))
+    dates_series = pd.Series(repeated_dates).sort_values()
+
+    # Append date and symbol data to new DataFrame
+    new_df['date'] = dates_series
+    new_df['symbol'] =  np.tile(symbols, len(dates))
+
+    # Create a numpy array of all the rates from the original DataFrame
+    for i in range(len(dates)):
+        arr = np.append(arr = arr, values=df.iloc[i, :])
+    
+    # Append the rates to the rate column in the new DataFrame
+    new_df['rate'] = arr
+    new_df = new_df.reset_index(drop=['index'])
+
+    # Export DataFrame to CSV
+    new_df.to_csv('dags/processed_rates.csv')
+    
+    # Return the new DataFrame
+    return new_df
+
+
+# Dag #5 - Create Google cloud storage bucket
 def load_to_google_storage():
 
     from google.cloud import storage
@@ -102,15 +157,7 @@ def load_to_google_storage():
     blob = bucket.blob('rates.csv')
 
     # Upload to bucket
-    blob.upload_from_filename('dags/rates.csv')
-
-
-def process_rates():
-    
-    df = pd.read_csv('dags/rates.csv', index_col='Unnamed: 0')
-    
-    
-    return df
+    blob.upload_from_filename('dags/processed_rates.csv')
 
 
 if __name__ == '__main__':
