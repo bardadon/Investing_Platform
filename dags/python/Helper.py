@@ -84,6 +84,28 @@ def create_dataframe(rates: dict, start_date: str, end_date: str, export_to_csv=
     return first_day_df
 
 
+# Dag #4 - Load Raw data to Cloud Storage
+def load_to_google_storage():
+
+    from google.cloud import storage
+    import os
+
+    # Set google configuration
+    os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'dags/ServiceKey_GoogleCloud.json'
+
+    # Create a storage client
+    storage_client = storage.Client()
+
+    # Grab the bucket
+    bucket = storage_client.get_bucket(bucket_or_name='stock_analysis_platform')
+
+    # Create blob
+    blob = bucket.blob('rates.csv')
+
+    # Upload to bucket
+    blob.upload_from_filename('dags/rates.csv')
+
+# Dag #5 - Process Raw Data
 def process_rates(rates_location = 'dags/rates.csv') -> pd.DataFrame:
 
     '''
@@ -137,27 +159,47 @@ def process_rates(rates_location = 'dags/rates.csv') -> pd.DataFrame:
     # Return the new DataFrame
     return new_df
 
+# Dag #6 - Load process data to BigQuery
+def load_to_bigquery() -> None:
 
-# Dag #5 - Create Google cloud storage bucket
-def load_to_google_storage():
+    '''
+    Read the processed rates into a Pandas DataFrame.
+    Export the DataFrame to Google BigQuery
 
-    from google.cloud import storage
+    Pre-requisites(Go to Google Console):
+        - Create a Dataset at BigQuery called: "Forex_Platform"
+        - Create a table called: "rates"
+    '''
+
+    import pandas as pd
+    from google.cloud import bigquery
     import os
 
-    # Set google configuration
     os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'dags/ServiceKey_GoogleCloud.json'
 
-    # Create a storage client
-    storage_client = storage.Client()
+    # Fetch the processed rates DataFrame
+    rates = pd.read_csv('dags/processed_rates.csv', index_col='Unnamed: 0')
 
-    # Grab the bucket
-    bucket = storage_client.get_bucket(bucket_or_name='stock_analysis_platform')
+    # Create a BigQuery client
+    bigquery_client = bigquery.Client()
 
-    # Create blob
-    blob = bucket.blob('rates.csv')
+    # Grab the data set "Forex_Platform"
+    dataset = bigquery_client.get_dataset('Forex_Platform')
 
-    # Upload to bucket
-    blob.upload_from_filename('dags/processed_rates.csv')
+    # Fetch details about the table "rates"
+    project = dataset.project
+    dataset = dataset.dataset_id
+    table_name = 'rates'
+    table_id = project + '.' + dataset + '.' + table_name
+
+    # Grab the table 
+    table = bigquery_client.get_table(table_id)
+
+    # Load the DataFrame "rates" to the table "rates"
+    bigquery_client.load_table_from_dataframe(dataframe=rates, project=project, destination=table)
+
+
+
 
 
 if __name__ == '__main__':

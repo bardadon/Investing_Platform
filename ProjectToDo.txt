@@ -1,0 +1,24 @@
+Project Todo list:
+
+# Load Raw Data to Cloud Storage
+(Done)Finish with the unit tests
+(Later)Extract additional data from different sources about the currencies, full names etc
+(Later)Try to extract enough information to have something to play with later on
+(Done)Next, load everything to Cloud Storage
+
+# Extract Data from Cloud Storage, process it and load to BigQuery
+(Done)Process the rates data so it would be comfortable to work with later on(in sql, matplotlib etc)
+(Done)Load to BigQuery
+(Later)
+    - Think how to make the loading more efficient. The way to do it is by incremental loadings
+    - Grab only the latest batch from Fixer.io and load only the records that do not appear in BigQuery
+
+# Visualization
+Extract the data from BigQuery(or continue with reading from the CSV files) and build graphs in a simple flask application 
+Create several webpages, each one has its own purpose.
+Create:
+    - home webpage - Explain about the platform.
+    -  plots webpage - show a list of the available symbols. Add each symbol will be a button.
+        Clicking on each symbol will navigate to plots/<symbol>
+    - plots/<symbol> webpage - show a canvas of different plots about that particular symbol.
+

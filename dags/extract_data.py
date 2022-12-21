@@ -50,22 +50,28 @@ def extract_data():
     def dag3_create_dataframe(rates: dict, start_date: str, end_date: str) -> pd.DataFrame:
         create_dataframe(rates, start_date, end_date)
 
-    # Dag #4 - Process DataFrame and create a new one
+    # Dag #4 - Create Google cloud storage bucket
     @task()
-    def dag4_process_rates():
+    def dag4_load_to_google_storage():
+        load_to_google_storage()
+
+    
+    # Dag #5 - Process DataFrame and create a new one
+    @task()
+    def dag5_process_rates():
         process_rates()
 
-    # Dag #5 - Create Google cloud storage bucket
+    # Dag #6 - Load process data to BigQuery
     @task()
-    def dag5_load_to_google_storage():
-        load_to_google_storage()
+    def dag6_load_to_bigquery():
+        load_to_bigquery()
 
 
     # Dependencies
     results = dag1_extract_rates(api_key = api_key, start_date='2022-01-01', end_date='2022-01-02')
     rates = dag2_extract_rates_dictionary(results=results)
-    dag3_create_dataframe(rates, start_date='2022-01-01', end_date='2022-01-02') >> dag4_process_rates() >> dag5_load_to_google_storage()
-    
+    dag3_create_dataframe(rates, start_date='2022-01-01', end_date='2022-01-02') \
+    >> [dag4_load_to_google_storage(), dag5_process_rates()] >> dag6_load_to_bigquery()
 
 # Instantiating the DAG
 extract_data = extract_data()
