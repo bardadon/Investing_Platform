@@ -2,6 +2,10 @@
 
 Welcome to Bar's Stock Analysis Platform. 
 
+## Workflow
+![workflow](https://user-images.githubusercontent.com/65648983/209153010-170cfa40-1cc0-4908-9bd6-1f87e6e01eb1.png)
+
+
 ## The home page
 ![home](https://user-images.githubusercontent.com/65648983/209152417-dd3d6ad9-1cd4-4425-b26c-6f560913950b.png)
 
