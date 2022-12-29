@@ -432,3 +432,10 @@
 [2022-12-29 17:23:14,285] {logging_mixin.py:115} INFO - [2022-12-29 17:23:14,284] {dag.py:2371} INFO - Sync 1 DAGs
 [2022-12-29 17:23:14,299] {logging_mixin.py:115} INFO - [2022-12-29 17:23:14,299] {dag.py:2919} INFO - Setting next_dagrun for populating_platform to 2022-12-28T17:23:14.299569+00:00, run_after=2022-12-29T17:23:14.299569+00:00
 [2022-12-29 17:23:14,310] {processor.py:161} INFO - Processing /opt/airflow/dags/populating_platform.py took 0.245 seconds
+[2022-12-29 17:23:44,539] {processor.py:153} INFO - Started process (PID=11041) to work on /opt/airflow/dags/populating_platform.py
+[2022-12-29 17:23:44,539] {processor.py:641} INFO - Processing file /opt/airflow/dags/populating_platform.py for tasks to queue
+[2022-12-29 17:23:44,540] {logging_mixin.py:115} INFO - [2022-12-29 17:23:44,540] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/populating_platform.py
+[2022-12-29 17:23:44,710] {processor.py:651} INFO - DAG(s) dict_keys(['populating_platform']) retrieved from /opt/airflow/dags/populating_platform.py
+[2022-12-29 17:23:44,757] {logging_mixin.py:115} INFO - [2022-12-29 17:23:44,757] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-12-29 17:23:44,769] {logging_mixin.py:115} INFO - [2022-12-29 17:23:44,769] {dag.py:2919} INFO - Setting next_dagrun for populating_platform to 2022-12-28T17:23:44.769358+00:00, run_after=2022-12-29T17:23:44.769358+00:00
+[2022-12-29 17:23:44,778] {processor.py:161} INFO - Processing /opt/airflow/dags/populating_platform.py took 0.241 seconds
