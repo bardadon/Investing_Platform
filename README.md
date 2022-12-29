@@ -7,6 +7,7 @@ Welcome to Bar's Forex Analysis Platform. The Forex rates are extracted from Fix
 The platform was first populated with two months worth of Forex rates using the dag: "populating_platform". 
 After the first batch of data, the pipeline "insert_new_data" is scheduled to run once a day and insert new data.
 
+All the rates are compared vs a US Dollar base rate. 
 
 ### populating_platform
 ![workflow](https://user-images.githubusercontent.com/65648983/209153010-170cfa40-1cc0-4908-9bd6-1f87e6e01eb1.png)
