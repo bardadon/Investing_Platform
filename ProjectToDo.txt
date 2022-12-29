@@ -1,5 +1,8 @@
 Project Todo list:
 
+(Done)## Part 1 - Populating the platform
+- This pipeline will only be used once to populate the platform with a batch of two months worth of data.
+
 # Load Raw Data to Cloud Storage
 (Done)Finish with the unit tests
 (Later)Extract additional data from different sources about the currencies, full names etc
@@ -14,11 +17,19 @@ Project Todo list:
     - Grab only the latest batch from Fixer.io and load only the records that do not appear in BigQuery
 
 # Visualization
-Extract the data from BigQuery(or continue with reading from the CSV files) and build graphs in a simple flask application 
-Create several webpages, each one has its own purpose.
-Create:
+(Done)Extract the data from BigQuery(or continue with reading from the CSV files) and build graphs in a simple flask application 
+(Done)Create several webpages, each one has its own purpose.
+(Done)Create:
     - home webpage - Explain about the platform.
     -  plots webpage - show a list of the available symbols. Add each symbol will be a button.
         Clicking on each symbol will navigate to plots/<symbol>
     - plots/<symbol> webpage - show a canvas of different plots about that particular symbol.
 
+
+
+
+
+
+## Part 2 - Inserting new data
+- This pipeline will run once a day(or whatever) and will populate the platform with additional data.
+- The idea is to be efficient and only extract the rates for the next day and append it as CSV file to Google Storage and insert it to the table "rates" in BigQuery.
