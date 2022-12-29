@@ -15,6 +15,10 @@ config = configparser.ConfigParser()
 config.read('dags/python/pipeline.conf')
 api_key = config.get('fixer_io_api_key', 'api_key')
 
+##                      ##
+## Populating Platform  ##
+##                      ##
+
 # Dag #1 - extract rates dictionary
 def extract_rates(api_key:str, start_date:str, end_date:str) -> str:
 
@@ -197,6 +201,14 @@ def load_to_bigquery() -> None:
 
     # Load the DataFrame "rates" to the table "rates"
     bigquery_client.load_table_from_dataframe(dataframe=rates, project=project, destination=table)
+
+
+##                      ##
+## Insert new rates     ##
+##                      ##
+
+
+
 
 
 

@@ -1,0 +1,23 @@
+[2022-12-29 16:39:28,132] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: load_rates.dag5_process_rates scheduled__2022-12-28T16:39:12.737691+00:00 [queued]>
+[2022-12-29 16:39:28,139] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: load_rates.dag5_process_rates scheduled__2022-12-28T16:39:12.737691+00:00 [queued]>
+[2022-12-29 16:39:28,139] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-29 16:39:28,139] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-12-29 16:39:28,139] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-29 16:39:28,149] {taskinstance.py:1377} INFO - Executing <Task(_PythonDecoratedOperator): dag5_process_rates> on 2022-12-28 16:39:12.737691+00:00
+[2022-12-29 16:39:28,154] {standard_task_runner.py:52} INFO - Started process 15319 to run task
+[2022-12-29 16:39:28,156] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'load_rates', 'dag5_process_rates', 'scheduled__2022-12-28T16:39:12.737691+00:00', '--job-id', '49', '--raw', '--subdir', 'DAGS_FOLDER/extract_data.py', '--cfg-path', '/tmp/tmpfctv3c4c', '--error-file', '/tmp/tmpcn8n8g50']
+[2022-12-29 16:39:28,157] {standard_task_runner.py:80} INFO - Job 49: Subtask dag5_process_rates
+[2022-12-29 16:39:28,198] {task_command.py:369} INFO - Running <TaskInstance: load_rates.dag5_process_rates scheduled__2022-12-28T16:39:12.737691+00:00 [running]> on host 99c1092660ad
+[2022-12-29 16:39:28,254] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=load_rates
+AIRFLOW_CTX_TASK_ID=dag5_process_rates
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-28T16:39:12.737691+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-12-28T16:39:12.737691+00:00
+[2022-12-29 16:39:28,335] {python.py:173} INFO - Done. Returned value was: None
+[2022-12-29 16:39:28,344] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=load_rates, task_id=dag5_process_rates, execution_date=20221228T163912, start_date=20221229T163928, end_date=20221229T163928
+[2022-12-29 16:39:28,368] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-12-29 16:39:28,396] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

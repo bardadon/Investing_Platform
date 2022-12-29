@@ -1,0 +1,23 @@
+[2022-12-29 16:42:44,511] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: load_rates.dag6_load_to_bigquery manual__2022-12-29T16:39:19.249478+00:00 [queued]>
+[2022-12-29 16:42:44,518] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: load_rates.dag6_load_to_bigquery manual__2022-12-29T16:39:19.249478+00:00 [queued]>
+[2022-12-29 16:42:44,519] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-29 16:42:44,519] {taskinstance.py:1357} INFO - Starting attempt 2 of 2
+[2022-12-29 16:42:44,519] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-29 16:42:44,529] {taskinstance.py:1377} INFO - Executing <Task(_PythonDecoratedOperator): dag6_load_to_bigquery> on 2022-12-29 16:39:19.249478+00:00
+[2022-12-29 16:42:44,533] {standard_task_runner.py:52} INFO - Started process 15499 to run task
+[2022-12-29 16:42:44,535] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'load_rates', 'dag6_load_to_bigquery', 'manual__2022-12-29T16:39:19.249478+00:00', '--job-id', '55', '--raw', '--subdir', 'DAGS_FOLDER/extract_data.py', '--cfg-path', '/tmp/tmploz54ajy', '--error-file', '/tmp/tmpurv_ub4j']
+[2022-12-29 16:42:44,536] {standard_task_runner.py:80} INFO - Job 55: Subtask dag6_load_to_bigquery
+[2022-12-29 16:42:44,575] {task_command.py:369} INFO - Running <TaskInstance: load_rates.dag6_load_to_bigquery manual__2022-12-29T16:39:19.249478+00:00 [running]> on host 99c1092660ad
+[2022-12-29 16:42:44,624] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=load_rates
+AIRFLOW_CTX_TASK_ID=dag6_load_to_bigquery
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-29T16:39:19.249478+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-29T16:39:19.249478+00:00
+[2022-12-29 16:42:49,594] {python.py:173} INFO - Done. Returned value was: None
+[2022-12-29 16:42:49,602] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=load_rates, task_id=dag6_load_to_bigquery, execution_date=20221229T163919, start_date=20221229T164244, end_date=20221229T164249
+[2022-12-29 16:42:49,637] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-12-29 16:42:49,654] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

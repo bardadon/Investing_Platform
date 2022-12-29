@@ -1,19 +1,35 @@
-import io
-from flask import Response
 import matplotlib.pyplot as plt
-from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
-from matplotlib.figure import Figure
 from flask import Flask, render_template
 import pandas as pd
+import plotly
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
+from google.cloud import bigquery
+import os
 
 # Set default settings
 plt.rcParams["figure.figsize"] = [7.50, 3.50]
 plt.rcParams["figure.autolayout"] = True
 
-# Grab the processed rates DataFrame
-df = pd.read_csv('dags/processed_rates.csv', index_col = 'Unnamed: 0')
+# Setting Google Credentials
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'dags/ServiceKey_GoogleCloud.json'
+
+# Creating a BigQuery client
+bigquery_client = bigquery.Client()
+
+# Fetching the data from BigQuery
+query = "SELECT * FROM Forex_Platform.rates;"
+
+# Retrieving the results from BigQuery
+query_job = bigquery_client.query(query)
+results = query_job.result()
+
+# Creating a Pandas DataFrame
+df = results.to_dataframe()
+
+# Extracting the dates and Symbols
 dates = df.date.unique()
-symbols = df.symbol.values
+symbols = df.symbol.unique()
 
 app = Flask(__name__)
 
@@ -32,32 +48,45 @@ def plots():
 @app.route('/plots/<symbol>')
 def plot_png(symbol):
 
-   plt.style.use('ggplot')
     
     # Extract the rates of the symbol in the URL
    rates = df[df.symbol == symbol].rate
-
-   # Create a figure and an axis objects
-   fig, ax = plt.subplots(2,1, figsize = [15,8])
-
-   # Create a line chart
-   ax[0].plot(rates, dates,  marker = 'v', linestyle= '--' ,c = 'r')
-   ax[0].set_xlabel('Rate', size = 16)
-   ax[0].set_ylabel('Date', size = 16, rotation = 0)
-   ax[0].set_title(f'Line Chart - {symbol}', size = 20)
-
-   # Create a histogram plot
-   ax[1].hist(rates)
-   ax[1].set_xlabel('Rate', size = 16)
-   ax[0].set_ylabel('Density', size = 16, rotation = 0)
-   ax[1].set_title(f'Histogram - {symbol}', size = 20)
    
-   # Output the chart as PNG
-   output = io.BytesIO()
-   FigureCanvas(fig).print_png(output)
+   # Create a figure with 4 graphs
+   fig = make_subplots(rows=1, cols=2)
 
-   # Return a rendered response of the PNG image
-   return Response(output.getvalue(), mimetype='image/png')
+   # Populate the figure with Scatter, Histogram
+   fig.add_trace(go.Scatter(x=dates, y=rates, name='Line Plot'), row=1, col=1)
+   fig.add_trace(go.Histogram(x=rates, name = 'Histogram', histnorm = 'probability'), row=1, col=2)
+
+   # Customizing Plots
+   # Customize the appearance of the histogram
+   fig.update_layout(
+    title_font_size=20,  # Increase title font size
+    xaxis_title_font_size=16,  # Increase x-axis title font size
+    yaxis_title_font_size=16,  # Increase y-axis title font size
+    barmode="overlay",  # Display bars on top of each other
+    bargroupgap=0.01,  # Reduce gap between bar groups
+    xaxis_tickangle=-45,  # Rotate x-axis tick labels
+    plot_bgcolor="#E5E5E5",  # Set plot background color
+    paper_bgcolor="#E5E5E5",  # Set paper background color
+    legend_title_font_size=16,  # Increase legend title font size
+    legend_font_size=14  # Increase legend font size
+)
+
+   ## Adding title, xaxis and yaxis
+   fig.update_layout(title = f'Symbol: USD vs {symbol}', xaxis_title = 'Date', yaxis_title = 'Rate')
+   
+   ## Adding legend
+  
+   # Set the size of the figure
+   fig.update_layout(width=1200, height=600)
+
+   # Plot figure and render in HTML
+   plot_html = plotly.offline.plot(fig, include_plotlyjs=True, output_type='div')
+
+   return render_template('symbol_plot.html', plot=plot_html, title = 'Symbol Dashboard')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
