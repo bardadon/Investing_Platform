@@ -1,6 +1,8 @@
-# stock_analysis_platform
+# Forex Anaylsis Platfrom
 
-Welcome to Bar's Stock Analysis Platform. 
+Hello!
+
+Welcome to Bar's Forex Analysis Platform. 
 
 ## Workflow
 ![workflow](https://user-images.githubusercontent.com/65648983/209153010-170cfa40-1cc0-4908-9bd6-1f87e6e01eb1.png)
@@ -11,8 +13,8 @@ Welcome to Bar's Stock Analysis Platform.
 
 
 ## Available Currencies
-![plots](https://user-images.githubusercontent.com/65648983/209152525-a796c902-56cc-4d13-9de8-51a0c9d55e7b.png)
+![symbols](https://user-images.githubusercontent.com/65648983/209988258-fbde2d07-9627-46b0-96ee-39c5dad45b91.png)
 
 
-## Example Analysis
-![plots2](https://user-images.githubusercontent.com/65648983/209152563-36b1e521-4aa4-4aa7-95dc-26f6555f226e.png)
+## Interactive Graphs
+![Analysis](https://user-images.githubusercontent.com/65648983/209988511-d285aa2b-3fc1-42a0-9c10-ff7ae38da4f1.png)
