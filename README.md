@@ -2,7 +2,7 @@
 
 Hello!
 
-Welcome to Bar's Forex Investing Platform.
+Welcome to the Forex Investing Platform.
 
 The Forex rates were extracted from Fixer.io using their awesome API.
 
