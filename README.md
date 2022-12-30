@@ -1,11 +1,14 @@
-# Forex Anaylsis Platfrom
+# Investing Platfrom
 
 Hello!
 
-Welcome to Bar's Forex Analysis Platform. The Forex rates are extracted from Fixer.io API.
+Welcome to Bar's Forex Investing Platform.
+
+The Forex rates were extracted from Fixer.io using their awesome API.
 
 The platform was first populated with two months worth of Forex rates using the dag: "populating_platform". 
-After the first batch of data, the pipeline "insert_new_rates" is scheduled to run once a day and insert new data.
+
+After the first batch of data, the pipeline "insert_new_rates" is in charge of inserting the latest EOD(end of day) data.
 
 All the rates are compared vs a US Dollar base rate. 
 
