@@ -28,7 +28,7 @@ default_args = {
     dag_id='populating_platform', 
     default_args= default_args, 
     catchup=False,
-    tags=['test']
+    tags=['Used to populate the platform with an initial batch of data']
 )
 
 def populating_platform():

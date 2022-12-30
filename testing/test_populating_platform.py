@@ -11,7 +11,6 @@ config.read('/projects/stock_analysis_platform/dags/python/pipeline.conf')
 api_key = config.get('fixer_io_api_key', 'api_key')
 
 
-
 #def test_extract_rates_canCall():
 
  #   rates = extract_rates(api_key = api_key, start_date='2022-01-01', end_date='2022-01-02')
@@ -68,19 +67,6 @@ def test_extractRates_canAppendFirstCurrency():
 
     # Process the rates and extract a new DataFrame
     new_df = process_rates()
-    
-    # Assert that the new DataFrame has the right columns, and first row is correct
-    assert new_df.columns.to_list() == ['date', 'symbol', 'rate']
-    assert new_df.iloc[0:1, 0].values == pd.to_datetime('2022-01-01')
-    assert new_df.iloc[0:1, 1].values == 'AED'
-    assert new_df.iloc[0:1, 2].values == 4.176782
-
-def test_extractRates_canAppendFirstCurrency():
-
-    # Process the rates and extract a new DataFrame
-    new_df = process_rates()
-
-    old_df = pd.read_csv('dags/rates.csv', index_col='Unnamed: 0')
     
     # Assert that the new DataFrame has the right columns, and first row is correct
     assert new_df.columns.to_list() == ['date', 'symbol', 'rate']

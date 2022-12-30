@@ -1,0 +1,23 @@
+[2022-12-30 14:45:02,482] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: insert_new_rates.dag5_load_to_bigquery_EOD manual__2022-12-30T14:44:02.100185+00:00 [queued]>
+[2022-12-30 14:45:02,488] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: insert_new_rates.dag5_load_to_bigquery_EOD manual__2022-12-30T14:44:02.100185+00:00 [queued]>
+[2022-12-30 14:45:02,488] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-30 14:45:02,488] {taskinstance.py:1357} INFO - Starting attempt 2 of 2
+[2022-12-30 14:45:02,488] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-30 14:45:02,500] {taskinstance.py:1377} INFO - Executing <Task(_PythonDecoratedOperator): dag5_load_to_bigquery_EOD> on 2022-12-30 14:44:02.100185+00:00
+[2022-12-30 14:45:02,504] {standard_task_runner.py:52} INFO - Started process 9897 to run task
+[2022-12-30 14:45:02,507] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'insert_new_rates', 'dag5_load_to_bigquery_EOD', 'manual__2022-12-30T14:44:02.100185+00:00', '--job-id', '121', '--raw', '--subdir', 'DAGS_FOLDER/insert_new_rates.py', '--cfg-path', '/tmp/tmpx7yukda4', '--error-file', '/tmp/tmprjxannqz']
+[2022-12-30 14:45:02,507] {standard_task_runner.py:80} INFO - Job 121: Subtask dag5_load_to_bigquery_EOD
+[2022-12-30 14:45:02,545] {task_command.py:369} INFO - Running <TaskInstance: insert_new_rates.dag5_load_to_bigquery_EOD manual__2022-12-30T14:44:02.100185+00:00 [running]> on host 99c1092660ad
+[2022-12-30 14:45:02,603] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=insert_new_rates
+AIRFLOW_CTX_TASK_ID=dag5_load_to_bigquery_EOD
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-30T14:44:02.100185+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-30T14:44:02.100185+00:00
+[2022-12-30 14:45:07,478] {python.py:173} INFO - Done. Returned value was: None
+[2022-12-30 14:45:07,493] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=insert_new_rates, task_id=dag5_load_to_bigquery_EOD, execution_date=20221230T144402, start_date=20221230T144502, end_date=20221230T144507
+[2022-12-30 14:45:07,535] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-12-30 14:45:07,559] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
