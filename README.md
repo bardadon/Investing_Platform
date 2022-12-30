@@ -12,6 +12,10 @@ After the first batch of data, the pipeline "insert_new_rates" is in charge of i
 
 All the rates are compared vs a US Dollar base rate. 
 
+### Platform Architecture
+![Untitled Diagram drawio(3)](https://user-images.githubusercontent.com/65648983/210087841-a6789329-e4ad-42ad-b29f-d82525b68eb2.png)
+
+
 ### Dag #1 - populating_platform
 ![workflow](https://user-images.githubusercontent.com/65648983/209153010-170cfa40-1cc0-4908-9bd6-1f87e6e01eb1.png)
 
