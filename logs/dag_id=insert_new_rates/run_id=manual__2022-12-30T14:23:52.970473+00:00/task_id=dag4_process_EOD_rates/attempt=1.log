@@ -1,0 +1,24 @@
+[2022-12-30 14:23:57,750] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: insert_new_rates.dag4_process_EOD_rates manual__2022-12-30T14:23:52.970473+00:00 [queued]>
+[2022-12-30 14:23:57,758] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: insert_new_rates.dag4_process_EOD_rates manual__2022-12-30T14:23:52.970473+00:00 [queued]>
+[2022-12-30 14:23:57,758] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-30 14:23:57,758] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-12-30 14:23:57,758] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-30 14:23:57,768] {taskinstance.py:1377} INFO - Executing <Task(_PythonDecoratedOperator): dag4_process_EOD_rates> on 2022-12-30 14:23:52.970473+00:00
+[2022-12-30 14:23:57,773] {standard_task_runner.py:52} INFO - Started process 8747 to run task
+[2022-12-30 14:23:57,775] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'insert_new_rates', 'dag4_process_EOD_rates', 'manual__2022-12-30T14:23:52.970473+00:00', '--job-id', '94', '--raw', '--subdir', 'DAGS_FOLDER/insert_new_rates.py', '--cfg-path', '/tmp/tmptrryusi_', '--error-file', '/tmp/tmpvzzbq6vo']
+[2022-12-30 14:23:57,776] {standard_task_runner.py:80} INFO - Job 94: Subtask dag4_process_EOD_rates
+[2022-12-30 14:23:57,811] {task_command.py:369} INFO - Running <TaskInstance: insert_new_rates.dag4_process_EOD_rates manual__2022-12-30T14:23:52.970473+00:00 [running]> on host 99c1092660ad
+[2022-12-30 14:23:57,868] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=insert_new_rates
+AIRFLOW_CTX_TASK_ID=dag4_process_EOD_rates
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-30T14:23:52.970473+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-30T14:23:52.970473+00:00
+[2022-12-30 14:23:57,879] {logging_mixin.py:115} INFO - 2022-03-05
+[2022-12-30 14:23:57,881] {python.py:173} INFO - Done. Returned value was: None
+[2022-12-30 14:23:57,889] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=insert_new_rates, task_id=dag4_process_EOD_rates, execution_date=20221230T142352, start_date=20221230T142357, end_date=20221230T142357
+[2022-12-30 14:23:57,908] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-12-30 14:23:57,934] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

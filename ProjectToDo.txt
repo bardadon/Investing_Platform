@@ -26,10 +26,6 @@ Project Todo list:
     - plots/<symbol> webpage - show a canvas of different plots about that particular symbol.
 
 
-
-
-
-
 ## Part 2 - Inserting new data
 - This pipeline will run once a day(or whatever) and will populate the platform with additional data.
 - The idea is to be efficient and only extract the rates for the next day and append it as CSV file to Google Storage and insert it to the table "rates" in BigQuery.

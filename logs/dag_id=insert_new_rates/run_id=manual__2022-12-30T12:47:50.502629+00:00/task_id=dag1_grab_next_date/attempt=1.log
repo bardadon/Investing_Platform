@@ -1,0 +1,23 @@
+[2022-12-30 12:47:51,435] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: insert_new_rates.dag1_grab_next_date manual__2022-12-30T12:47:50.502629+00:00 [queued]>
+[2022-12-30 12:47:51,440] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: insert_new_rates.dag1_grab_next_date manual__2022-12-30T12:47:50.502629+00:00 [queued]>
+[2022-12-30 12:47:51,440] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-30 12:47:51,441] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-12-30 12:47:51,441] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-30 12:47:51,449] {taskinstance.py:1377} INFO - Executing <Task(_PythonDecoratedOperator): dag1_grab_next_date> on 2022-12-30 12:47:50.502629+00:00
+[2022-12-30 12:47:51,453] {standard_task_runner.py:52} INFO - Started process 3800 to run task
+[2022-12-30 12:47:51,456] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'insert_new_rates', 'dag1_grab_next_date', 'manual__2022-12-30T12:47:50.502629+00:00', '--job-id', '70', '--raw', '--subdir', 'DAGS_FOLDER/insert_new_rates.py', '--cfg-path', '/tmp/tmpsdqd1rcq', '--error-file', '/tmp/tmpyybk26hv']
+[2022-12-30 12:47:51,456] {standard_task_runner.py:80} INFO - Job 70: Subtask dag1_grab_next_date
+[2022-12-30 12:47:51,493] {task_command.py:369} INFO - Running <TaskInstance: insert_new_rates.dag1_grab_next_date manual__2022-12-30T12:47:50.502629+00:00 [running]> on host 99c1092660ad
+[2022-12-30 12:47:51,547] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=insert_new_rates
+AIRFLOW_CTX_TASK_ID=dag1_grab_next_date
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-30T12:47:50.502629+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-30T12:47:50.502629+00:00
+[2022-12-30 12:47:51,547] {python.py:173} INFO - Done. Returned value was: 2022-03-04
+[2022-12-30 12:47:51,564] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=insert_new_rates, task_id=dag1_grab_next_date, execution_date=20221230T124750, start_date=20221230T124751, end_date=20221230T124751
+[2022-12-30 12:47:51,587] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-12-30 12:47:51,615] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -4,16 +4,21 @@ from airflow.decorators import task, dag
 
 import configparser
 from datetime import datetime
+import datetime
 import requests
 import json
 import pandas as pd
 import numpy as np
-
+import os
 
 # Configs
 config = configparser.ConfigParser()
 config.read('dags/python/pipeline.conf')
 api_key = config.get('fixer_io_api_key', 'api_key')
+
+# Set google configuration
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = '/opt/airflow/dags/ServiceKey_GoogleCloud.json'
+
 
 ##                      ##
 ## Populating Platform  ##
@@ -94,8 +99,6 @@ def load_to_google_storage():
     from google.cloud import storage
     import os
 
-    # Set google configuration
-    os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'dags/ServiceKey_GoogleCloud.json'
 
     # Create a storage client
     storage_client = storage.Client()
@@ -179,8 +182,6 @@ def load_to_bigquery() -> None:
     from google.cloud import bigquery
     import os
 
-    os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'dags/ServiceKey_GoogleCloud.json'
-
     # Fetch the processed rates DataFrame
     rates = pd.read_csv('dags/processed_rates.csv', index_col='Unnamed: 0')
 
@@ -207,32 +208,115 @@ def load_to_bigquery() -> None:
 ## Insert new rates     ##
 ##                      ##
 
+def grab_next_date():
+
+    # Grab latest date from the file name of the lastest CSV file
+    os.chdir(path='dags/data')
+    latest_csv_file = os.listdir()[0]
+    latest_day = latest_csv_file[len('processed_rates_'):-4]
+
+    # Calculate next day
+    start_date_datetime = datetime.datetime.fromisoformat(latest_day)
+    td = datetime.timedelta(days=1)
+    next_date = datetime.datetime.strftime((start_date_datetime + td), format = '%Y-%m-%d')
+
+    return next_date
+
+# Dag #3 - Create a DataFrame
+def create_EOD_dataframe(rates: dict, start_date: str) -> pd.DataFrame:
+
+    eod_data = rates.get(str(start_date))
+    rates_df = pd.DataFrame(eod_data, index = [0])
+    rates_df.index = [start_date]
+    return rates_df
+
+# Dag #4 - Process Raw Data
+def process_EOD_rates(rates_df) -> pd.DataFrame:
+
+    '''
+    Process the rates DataFrame. 
+    Convert format from this:
+        
+        - date|AED|AFN|ALL|AMD|ANG ... etc
+
+    To this:
+
+        - date|symbol|rate
+
+    Args:
+        - rates_df(pd.DataFrame) - The rates DataFrame
+    Returns:
+        - new_df(pd.DataFrame) - The processed DataFrame.
+    '''
+    # Create a new DataFrame
+    new_df = pd.DataFrame(columns=['date', 'symbol', 'rate'])
+
+    # Grab the symbols and rates from old DataFrame
+    symbols = rates_df.T.index
+    start_date = np.min(rates_df.index)
+    arr = rates_df.values[0]
+    
+    # Set some values
+    repeated_dates = np.tile(start_date, len(symbols))
+    dates_series = pd.Series(repeated_dates).sort_values()
+
+    # Append the date, symbols and rates to new DataFrame
+    new_df['date'] = dates_series
+    new_df['symbol'] =  symbols
+    new_df['rate'] = arr
+
+    # Reset index
+    new_df = new_df.reset_index(drop=['index'])
+    # Export as CSV. Add current day to the name
+    new_df.to_csv(f'processed_rates_{start_date}.csv')
+
+    # Return the new DataFrame
+    return new_df
 
 
+# Dag #6 - Load process data to BigQuery
+def load_to_bigquery_EOD(new_df) -> None:
+
+    '''
+    Read the processed rates into a Pandas DataFrame.
+    Export the DataFrame to Google BigQuery
+
+    Pre-requisites(Go to Google Console):
+        - Create a Dataset at BigQuery called: "Forex_Platform"
+        - Create a table called: "rates"
+    '''
+
+    from google.cloud import bigquery
+
+    # Create a BigQuery client
+    bigquery_client = bigquery.Client()
+
+    # Grab the data set "Forex_Platform"
+    dataset = bigquery_client.get_dataset('Forex_Platform')
+
+    # Fetch details about the table "rates"
+    project = dataset.project
+    dataset = dataset.dataset_id
+    table_name = 'rates'
+    table_id = project + '.' + dataset + '.' + table_name
+
+    # Grab the table 
+    table = bigquery_client.get_table(table_id)
+
+    # Load the DataFrame "rates" to the table "rates"
+    bigquery_client.load_table_from_dataframe(dataframe=new_df, project=project, destination=table)
 
 
 
 
 
 if __name__ == '__main__':
-    #results = extract_rates(api_key = api_key, start_date='2022-01-01', end_date='2022-01-02')
-    #rates = extract_rates_dictionary(results=results)
-    #create_dataframe(rates, start_date='2022-01-01', end_date='2022-01-02')
-    
-    df = process_rates()
-    new_df = pd.DataFrame(columns=['Date', 'Symbol', 'Rate'])
-    
-    print(df)
-    print(new_df.iloc[0:1, 0])
 
-    
-    currency_values = df.iloc[:, 0].values
-    currency_name = df.columns[0]
-    currency_name = df.columns[0]
-    print(currency_values, currency_name)
-    new_df[currency_name] = currency_values
+    # Insert new data workflow
 
-    print(new_df)
-
-
-    #load_to_google_storage()
+    start_date = '2022-03-02'
+    rates = extract_rates(api_key = api_key, start_date=start_date, end_date=start_date)
+    rates = extract_rates_dictionary(rates)
+    rates_df = create_EOD_dataframe(rates, start_date=start_date)
+    new_df = process_EOD_rates(rates_df)
+    load_to_bigquery_EOD(start_date=start_date)

@@ -12,13 +12,13 @@ plt.rcParams["figure.figsize"] = [7.50, 3.50]
 plt.rcParams["figure.autolayout"] = True
 
 # Setting Google Credentials
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'dags/ServiceKey_GoogleCloud.json'
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = '/projects/stock_analysis_platform/dags/ServiceKey_GoogleCloud.json'
 
 # Creating a BigQuery client
 bigquery_client = bigquery.Client()
 
 # Fetching the data from BigQuery
-query = "SELECT * FROM Forex_Platform.rates;"
+query = "SELECT * FROM Forex_Platform.rates order by date, symbol;"
 
 # Retrieving the results from BigQuery
 query_job = bigquery_client.query(query)
@@ -56,7 +56,7 @@ def plot_png(symbol):
    fig = make_subplots(rows=1, cols=2)
 
    # Populate the figure with Scatter, Histogram
-   fig.add_trace(go.Scatter(x=dates, y=rates, name='Line Plot'), row=1, col=1)
+   fig.add_trace(go.Scatter(x=dates, y=rates, name='Line Plot', ), row=1, col=1)
    fig.add_trace(go.Histogram(x=rates, name = 'Histogram', histnorm = 'probability'), row=1, col=2)
 
    # Customizing Plots
@@ -76,9 +76,7 @@ def plot_png(symbol):
 
    ## Adding title, xaxis and yaxis
    fig.update_layout(title = f'Symbol: USD vs {symbol}', xaxis_title = 'Date', yaxis_title = 'Rate')
-   
-   ## Adding legend
-  
+     
    # Set the size of the figure
    fig.update_layout(width=1200, height=600)
 
