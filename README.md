@@ -13,6 +13,7 @@ All the rates are compared vs a US Dollar base rate.
 ![workflow](https://user-images.githubusercontent.com/65648983/209153010-170cfa40-1cc0-4908-9bd6-1f87e6e01eb1.png)
 
 ### Dag #2 - insert_new_rates
+![workflow_2](https://user-images.githubusercontent.com/65648983/210083958-01878e18-4d56-47ee-8ddf-4a0a140c569c.png)
 
 
 ### The home page
