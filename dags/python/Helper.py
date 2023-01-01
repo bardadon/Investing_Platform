@@ -22,18 +22,20 @@ os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = '/opt/airflow/dags/ServiceKey_Goo
 # Dag #1 - extract rates dictionary
 def extract_rates(api_key:str, start_date:str, end_date:str) -> str:
 
+    from typing import Dict
+
     '''
     Extract Forex rates from Fixer.io. 
 
     Args:
-    - api_key:str, start_date:str, end_date:str
+        -> api_key:str, start_date:str, end_date:str
     Returns
-    - result:dict
+        -> result:dict
     '''
 
     url = f"https://api.apilayer.com/fixer/timeseries?start_date={start_date}&end_date={end_date}"
 
-    payload = {}
+    payload: Dict[str, str] = {}
     headers= {
     "apikey": api_key
     }
@@ -50,9 +52,9 @@ def extract_rates_dictionary(results:str) -> dict:
     Extract the rates dictionary from Fixer.io response.
 
     Args:
-    - result = Fixer.io reponse
+        -> result = Fixer.io reponse
     Returns
-    - rates = rates dictionary
+        -> rates = rates dictionary
     '''
 
     data = json.loads(results)
@@ -61,6 +63,20 @@ def extract_rates_dictionary(results:str) -> dict:
 
 # Dag #3 - Create a dataframe 
 def create_dataframe(rates: dict, start_date: str, end_date: str, export_to_csv=True) -> pd.DataFrame:
+
+    '''
+    Create a DataFrame from rates dictionary.
+    Export as CSV.
+
+    Args:
+        -> rates(dict)
+        -> start_date(str)
+        -> end_date(str)
+        -> export_to_csv(Bool)
+            - Default = True
+    Returns:
+        -> pd.DataFrame
+    '''
 
     # Create a dataframe with the columns and indices from the first day's data
     first_day_data = rates.get(str(start_date))
@@ -90,6 +106,16 @@ def create_dataframe(rates: dict, start_date: str, end_date: str, export_to_csv=
 # Dag #4 - Load Raw data to Cloud Storage
 def load_to_google_storage():
 
+    '''
+    Get or create a Google Cloud Storage Bucket.
+    Load the CSV file: rates.csv to the Storage Bucket.
+
+    Args:
+        -> None
+    Returns:
+        -> None
+    '''
+
     from google.cloud import storage
 
     # Create a storage client
@@ -109,7 +135,7 @@ def load_to_google_storage():
     blob.upload_from_filename('dags/rates.csv')
 
 # Dag #5 - Process Raw Data
-def process_rates(rates_location = 'dags/rates.csv') -> pd.DataFrame:
+def process_rates(rates_location: str = 'dags/rates.csv') -> pd.DataFrame:
 
     '''
     Process the rates DataFrame. 
@@ -122,9 +148,9 @@ def process_rates(rates_location = 'dags/rates.csv') -> pd.DataFrame:
         - date|symbol|rate
 
     Args:
-        - rates_DataFrame_location(str) - Location of the rates CSV file.
+        -> rates_DataFrame_location(str) - Location of the rates CSV file.
     Returns:
-        - new_df(pd.DataFrame) - The new DataFrame.
+        -> new_df(pd.DataFrame) - The new DataFrame.
     '''
     
     df = pd.read_csv(rates_location, index_col='Unnamed: 0')
@@ -194,7 +220,7 @@ def load_to_bigquery() -> None:
         # Grab the data set "Forex_Platform"
         dataset = bigquery_client.get_dataset('Forex_Platform')
 
-    # Set table details
+    # Define table details
     table = dataset.table('rates')
     table.schema = [
         bigquery.SchemaField('date', 'DATE', mode='REQUIRED'),
@@ -217,7 +243,17 @@ def load_to_bigquery() -> None:
 ## Insert new rates     ##
 ##                      ##
 
-def grab_next_date():
+def grab_next_date() -> datetime.datetime:
+
+    '''
+    Grab the date of the next day to load.
+    Uses string manipulation to grab the latest date from the last CSV file.
+
+    Args:
+        -> None
+    Returns:
+        -> next_date(datetime.datetime)
+    '''
 
     # Grab latest date from the file name of the lastest CSV file
     os.chdir(path='dags/data')
@@ -234,13 +270,23 @@ def grab_next_date():
 # Dag #3 - Create a DataFrame
 def create_EOD_dataframe(rates: dict, start_date: str) -> pd.DataFrame:
 
+    '''
+    Create a Pandas DataFrame from the rates dictionary.
+
+    Args:
+        -> rates(dict) 
+        -> start_date(str) 
+    Returns:    
+        -> rates_df(pd.DataFrame)
+    '''
+
     eod_data = rates.get(str(start_date))
     rates_df = pd.DataFrame(eod_data, index = [0])
     rates_df.index = [start_date]
     return rates_df
 
 # Dag #4 - Process Raw Data
-def process_EOD_rates(rates_df) -> pd.DataFrame:
+def process_EOD_rates(rates_df: pd.DataFrame) -> pd.DataFrame:
 
     '''
     Process the rates DataFrame. 
@@ -284,15 +330,16 @@ def process_EOD_rates(rates_df) -> pd.DataFrame:
 
 
 # Dag #6 - Load process data to BigQuery
-def load_to_bigquery_EOD(new_df) -> None:
+def load_to_bigquery_EOD(new_df: pd.DataFrame) -> None:
 
     '''
     Read the processed rates into a Pandas DataFrame.
     Export the DataFrame to Google BigQuery
 
-    Pre-requisites(Go to Google Console):
-        - Create a Dataset at BigQuery called: "Forex_Platform"
-        - Create a table called: "rates"
+    Args:
+        -> new_df(pd.DataFrame)
+    Returns:
+        -> None
     '''
 
     from google.cloud import bigquery

@@ -1,0 +1,23 @@
+[2023-01-01 11:53:01,065] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: populating_platform.dag5_process_rates manual__2023-01-01T11:52:54.189604+00:00 [queued]>
+[2023-01-01 11:53:01,072] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: populating_platform.dag5_process_rates manual__2023-01-01T11:52:54.189604+00:00 [queued]>
+[2023-01-01 11:53:01,072] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-01 11:53:01,072] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2023-01-01 11:53:01,072] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-01 11:53:01,083] {taskinstance.py:1377} INFO - Executing <Task(_PythonDecoratedOperator): dag5_process_rates> on 2023-01-01 11:52:54.189604+00:00
+[2023-01-01 11:53:01,088] {standard_task_runner.py:52} INFO - Started process 4516 to run task
+[2023-01-01 11:53:01,091] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'populating_platform', 'dag5_process_rates', 'manual__2023-01-01T11:52:54.189604+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/populating_platform.py', '--cfg-path', '/tmp/tmphgydc5bk', '--error-file', '/tmp/tmprhy8uci0']
+[2023-01-01 11:53:01,092] {standard_task_runner.py:80} INFO - Job 12: Subtask dag5_process_rates
+[2023-01-01 11:53:01,137] {task_command.py:369} INFO - Running <TaskInstance: populating_platform.dag5_process_rates manual__2023-01-01T11:52:54.189604+00:00 [running]> on host fd91d50c498d
+[2023-01-01 11:53:01,191] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=populating_platform
+AIRFLOW_CTX_TASK_ID=dag5_process_rates
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-01T11:52:54.189604+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-01-01T11:52:54.189604+00:00
+[2023-01-01 11:53:01,258] {python.py:173} INFO - Done. Returned value was: None
+[2023-01-01 11:53:01,267] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=populating_platform, task_id=dag5_process_rates, execution_date=20230101T115254, start_date=20230101T115301, end_date=20230101T115301
+[2023-01-01 11:53:01,303] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-01-01 11:53:01,332] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
