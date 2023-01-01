@@ -1,9 +1,0 @@
-{% extends "layout.html" %}
-
-{% block content %}
-  <h1>Select a Currency Pair</h1>
-  <p>Please select a currency pair from the list below to view its price plot:</p>
-  {% for symbol in symbols %}
-    <a href="/plots/{{ symbol }}"><button>{{ symbol }}</button></a>
-  {% endfor %}
-{% endblock %}
