@@ -1,5 +1,4 @@
 import configparser
-from datetime import datetime
 import datetime
 import requests
 import json
@@ -180,7 +179,6 @@ def load_to_bigquery() -> None:
 
     import pandas as pd
     from google.cloud import bigquery
-    import os
 
     # Fetch the processed rates DataFrame
     rates = pd.read_csv('dags/processed_rates.csv', index_col='Unnamed: 0')
