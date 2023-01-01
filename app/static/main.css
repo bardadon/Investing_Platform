@@ -1,0 +1,153 @@
+body {
+  background: #d6f0f7;
+  color: #333333;
+  margin-top: 5rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, sans-serif;
+  font-size: large;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #444444;
+}
+
+.bg-steel {
+  background-color: #1b1b1b;
+}
+
+.site-header .navbar-nav .nav-link {
+  color: #cbd5db;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: lowercase;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+.site-header .navbar-nav .nav-link.active {
+  font-weight: 500;
+  border-bottom: 2px solid #ffffff;
+}
+
+.content-section {
+  background: #ffffff;
+  padding: 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 40px;
+}
+
+.article-title {
+  color: #444444;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+a.article-title:hover {
+  color: #428bca;
+  text-decoration: none;
+}
+
+.article-content {
+  white-space: pre-line;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.article-img {
+  height: 65px;
+  width: 65px;
+  margin-right: 16px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.article-metadata {
+  display: flex;
+  align-items: center;
+  padding-bottom: 1px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #e3e3e3
+}
+
+.article-metadata a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.article-metadata img {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 0.5rem;
+}
+
+.article-metadata .article-author {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+.article-metadata .article-date {
+  font-size: 1.2rem;
+  color: #999;
+}
+
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+/* Change the background color of the button */
+button {
+background-color: rgb(129, 129, 230);
+}
+
+/* Change the text color of the button */
+button {
+color: white;
+}
+
+/* Add a border to the button */
+button {
+border: 2px solid black;
+}
+
+/* Change the font size of the button */
+button {
+font-size: 10;
+}
+
+/* Add some padding to the button */
+button {
+padding: 10px;
+}
+
+/* Use a custom font for the symbols */
+button {
+font-family: 'Arial', 'Helvetica Neue', sans-serif;
+}
+
+/* Add a hover effect to the button */
+button:hover {
+background-color: red;
+}
+
+
+/* Use a flex layout to organize the buttons and align them horizontally */
+/*.container {
+display: flex;
+/*flex-wrap: wrap;  /* Wrap the elements to multiple lines */
+/*justify-content: center;  /* Align the elements horizontally */
+/*padding: 20px;  /* Add some padding to the container */
+/*}
