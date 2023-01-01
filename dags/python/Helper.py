@@ -1,7 +1,3 @@
-from airflow import DAG
-from airflow.operators.python import PythonOperator
-from airflow.decorators import task, dag
-
 import configparser
 from datetime import datetime
 import datetime
@@ -92,19 +88,20 @@ def create_dataframe(rates: dict, start_date: str, end_date: str, export_to_csv=
         
     return first_day_df
 
-
 # Dag #4 - Load Raw data to Cloud Storage
 def load_to_google_storage():
 
     from google.cloud import storage
-    import os
-
 
     # Create a storage client
     storage_client = storage.Client()
 
-    # Grab the bucket
-    bucket = storage_client.get_bucket(bucket_or_name='stock_analysis_platform')
+    try:
+        # Create a Cloud Storage Bucket
+        storage_client.create_bucket(bucket_or_name='stock_analysis_platform')
+    except Exception:
+        # Grab the bucket
+        bucket = storage_client.get_bucket(bucket_or_name='stock_analysis_platform')
 
     # Create blob
     blob = bucket.blob('rates.csv')
@@ -158,6 +155,9 @@ def process_rates(rates_location = 'dags/rates.csv') -> pd.DataFrame:
     
     # Append the rates to the rate column in the new DataFrame
     new_df['rate'] = arr
+
+    # Sort DataFrame by date and reset index
+    new_df.sort_values(by='date', ascending=False, inplace=True)
     new_df = new_df.reset_index(drop=['index'])
 
     # Export DataFrame to CSV
@@ -188,21 +188,32 @@ def load_to_bigquery() -> None:
     # Create a BigQuery client
     bigquery_client = bigquery.Client()
 
-    # Grab the data set "Forex_Platform"
-    dataset = bigquery_client.get_dataset('Forex_Platform')
+    # Get or Create a data set 
+    try:
+        # Create the dataset
+        dataset = bigquery_client.create_dataset('Forex_Platform')
+    except Exception:
+        # Grab the data set "Forex_Platform"
+        dataset = bigquery_client.get_dataset('Forex_Platform')
 
-    # Fetch details about the table "rates"
-    project = dataset.project
-    dataset = dataset.dataset_id
-    table_name = 'rates'
-    table_id = project + '.' + dataset + '.' + table_name
+    # Set table details
+    table = dataset.table('rates')
+    table.schema = [
+        bigquery.SchemaField('date', 'DATE', mode='REQUIRED'),
+        bigquery.SchemaField('symbol', 'TEXT', mode='REQUIRED'),
+        bigquery.SchemaField('rate', 'DECIMAL', mode='REQUIRED')
+    ]
 
-    # Grab the table 
-    table = bigquery_client.get_table(table_id)
+    # Get or Create a table
+    try:
+        # Create the table
+        table = bigquery_client.create_table(table)
+    except Exception:
+        # Grab the table 
+        table = bigquery_client.get_table(table)
 
     # Load the DataFrame "rates" to the table "rates"
-    bigquery_client.load_table_from_dataframe(dataframe=rates, project=project, destination=table)
-
+    bigquery_client.load_table_from_dataframe(dataframe=rates, destination=table)
 
 ##                      ##
 ## Insert new rates     ##
@@ -305,18 +316,3 @@ def load_to_bigquery_EOD(new_df) -> None:
 
     # Load the DataFrame "rates" to the table "rates"
     bigquery_client.load_table_from_dataframe(dataframe=new_df, project=project, destination=table)
-
-
-
-
-
-if __name__ == '__main__':
-
-    # Insert new data workflow
-
-    start_date = '2022-03-02'
-    rates = extract_rates(api_key = api_key, start_date=start_date, end_date=start_date)
-    rates = extract_rates_dictionary(rates)
-    rates_df = create_EOD_dataframe(rates, start_date=start_date)
-    new_df = process_EOD_rates(rates_df)
-    load_to_bigquery_EOD(start_date=start_date)
