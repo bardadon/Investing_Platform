@@ -24,12 +24,16 @@ All the rates are compared vs a US Dollar base rate.
 
 
 ## The home page
-![home](https://user-images.githubusercontent.com/65648983/209152417-dd3d6ad9-1cd4-4425-b26c-6f560913950b.png)
+![Home_page](https://user-images.githubusercontent.com/65648983/210172554-70dd28ba-28fd-4c09-a71d-383157915dd7.png)
 
 
 ## Available Currencies
-![symbols](https://user-images.githubusercontent.com/65648983/209988258-fbde2d07-9627-46b0-96ee-39c5dad45b91.png)
+![available_currencies](https://user-images.githubusercontent.com/65648983/210172561-9f1d6cdd-c3f5-47e2-9492-068c83adbfa0.png)
+
+## Registration/Login Forms
+![register_form](https://user-images.githubusercontent.com/65648983/210172619-7b38ae88-6016-4781-bf34-3f2fa69bfbcb.png)
+![login_form](https://user-images.githubusercontent.com/65648983/210172620-6d86bd6a-8fe1-41ea-89ce-2184cc1e398e.png)
 
 
 ## Interactive Graphs
-![Analysis](https://user-images.githubusercontent.com/65648983/209988511-d285aa2b-3fc1-42a0-9c10-ff7ae38da4f1.png)
+![example_analysis](https://user-images.githubusercontent.com/65648983/210172603-2a3abb35-cc82-421a-b8b7-f15d7309fe06.png)
