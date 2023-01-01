@@ -1,13 +1,9 @@
-from airflow import DAG
-from airflow.operators.python import PythonOperator
 from airflow.decorators import task, dag
 from python.Helper import *
-
 
 import configparser
 from datetime import datetime
 import pandas as pd
-
 
 
 # Configs
@@ -15,22 +11,16 @@ config = configparser.ConfigParser()
 config.read('dags/python/pipeline.conf')
 api_key = config.get('fixer_io_api_key', 'api_key')
 
-# Choose the dates to populate
+# Initial dates to populate
 start_date = '2022-01-01'
 end_date = '2022-03-01'
 
+# Setting default configs
 default_args = {
     'start_date':datetime.fromisoformat(start_date)
 }
 
-
-@dag(
-    dag_id='populating_platform', 
-    default_args= default_args, 
-    catchup=False,
-    tags=['Used to populate the platform with an initial batch of data']
-)
-
+@dag(dag_id='populating_platform', default_args= default_args, catchup=False, tags=['Initial_Load'])
 def populating_platform():
 
     # Dag #1 - extract rates dictionary
