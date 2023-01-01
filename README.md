@@ -2,7 +2,7 @@
 
 Hello!
 
-Welcome to the Forex Investing Platform.
+Welcome to my Forex Investing Platform.
 
 The Forex rates were extracted from Fixer.io using their awesome API.
 
