@@ -39,6 +39,6 @@ All the rates are compared vs a US Dollar base rate.
 ## Interactive Graphs
 ![example_analysis](https://user-images.githubusercontent.com/65648983/210172603-2a3abb35-cc82-421a-b8b7-f15d7309fe06.png)
 
-## Medium Article
+## Medium Articles
   1. Pipeline #1 - populating_platform - https://medium.com/@bdadon50/data-engineering-project-creating-an-investing-platform-part-1-e777b5bd27cd
   2. Pipeline #2 - insert_new_rates - https://medium.com/@bdadon50/data-engineering-project-creating-an-investing-platform-part-2-3c41ff7de9df
