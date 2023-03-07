@@ -2,9 +2,10 @@
 
 Hello!
 
-Welcome to my Forex Investing Platform.
+Welcome to my Forex Investing Platform. 
 
-The Forex rates were extracted from Fixer.io using their awesome API.
+I used __Flask__ to build the app and extracted the Forex rates from __Fixer.io__
+ using their awesome API.
 
 The platform was first populated with two months worth of Forex rates using the dag: "populating_platform". 
 
