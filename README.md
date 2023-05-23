@@ -43,3 +43,4 @@ All the rates are compared vs a US Dollar base rate.
 ## Medium Articles
   1. Pipeline #1 - populating_platform - https://medium.com/@bdadon50/data-engineering-project-creating-an-investing-platform-part-1-e777b5bd27cd
   2. Pipeline #2 - insert_new_rates - https://medium.com/@bdadon50/data-engineering-project-creating-an-investing-platform-part-2-3c41ff7de9df
+  3. Building the Flask App - https://medium.com/towardsdev/data-engineering-project-creating-an-investing-platform-part-3-2129c8ae25b
